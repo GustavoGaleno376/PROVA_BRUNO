@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VitaMed</title>
+    <link rel="stylesheet" href="css/tela_cliente.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #A0DED6 0%, #1a5a4d 100%);
+            min-height: 100vh;
+            padding-top: 90px;
+        }
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            z-index: 1000;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+            height: 48px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            position: relative;
+            padding: 5px 0;
+            transition: all 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #1a5a4d;
+        }
+        .nav-links a:hover::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #A0DED6;
+        }
+        .login-main {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+            padding: 48px 38px 38px 38px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            animation: fadeInUp 0.8s;
+        }
+        .login-card h1 {
+            color: #1a5a4d;
+            font-size: 2.1rem;
+            margin-bottom: 10px;
+        }
+        .login-card p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .login-card .form-group {
+            margin-bottom: 22px;
+            text-align: left;
+        }
+        .login-card label {
+            color: #1a5a4d;
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: block;
+        }
+        .login-card input {
+            width: 100%;
+            padding: 13px 12px;
+            border: 1px solid #A0DED6;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 2px;
+            transition: border 0.3s;
+        }
+        .login-card input:focus {
+            border-color: #1a5a4d;
+            outline: none;
+        }
+        .login-card .btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #1a5a4d 60%, #A0DED6 100%);
+            color: #fff;
+            border: none;
+            margin-top: 10px;
+            margin-bottom: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .login-card .btn:hover {
+            background: linear-gradient(90deg, #A0DED6 0%, #1a5a4d 100%);
+            color: #fff;
+        }
+        .login-card .divider {
+            margin: 18px 0;
+            color: #bbb;
+            font-size: 0.95rem;
+            position: relative;
+        }
+        .login-card .divider:before, .login-card .divider:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background: #eee;
+        }
+        .login-card .divider:before {
+            left: 0;
+        }
+        .login-card .divider:after {
+            right: 0;
+        }
+        .login-card .register-link {
+            color: #666;
+            margin-top: 18px;
+        }
+        .login-card .register-link a {
+            color: #1a5a4d;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .login-card .register-link a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.95rem;
+            background: #fff;
+        }
+        @media (max-width: 600px) {
+            .login-card { padding: 28px 8px; }
+            .header { flex-direction: column; gap: 10px; }
+        }
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        body { padding-top: 80px; }
+        .header .nav-links a {
+            text-decoration: none;
+            color: #1a5a4d;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .header .nav-links a:not(.action-btn):hover {
+            color: #A0DED6;
+        }
+        .header .nav-links .action-btn:hover {
+            background: #A0DED6;
+            color: #1a5a4d;
+        }
+    </style>
+</head>
+<body>
+    <header class="header fixed-header">
+        <div class="header-container" style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px;width:100vw;">
+            <a href="tela_cliente.htm" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+                <img src="svg.svg" alt="VitaMed Logo" style="height:44px;width:auto;">
+            </a>
+            <nav class="nav-links" style="display:flex;align-items:center;gap:28px;">
+                <a href="tela_cliente.htm">Home</a>
+                <a href="imc.htm">IMC</a>
+                <a href="catalogo_medicos.htm">Médicos</a>
+                <a href="sobre_nos.htm">Sobre Nós</a>
+                <a href="login.htm" class="action-btn" style="background:#1a5a4d;color:#fff;padding:8px 22px;border-radius:22px;font-weight:600;">Login</a>
+            </nav>
+        </div>
+    </header>
+    <main class="login-main">
+        <div class="login-card">
+            <h1>Bem-vindo!</h1>
+            <p>Acesse sua conta para continuar sua jornada de saúde com a VitaMed.</p>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+            <div class="divider">ou</div>
+            <div class="register-link">
+                Não tem uma conta? <a href="#" id="registerLink">Cadastre-se</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        © 2023 VitaMed. Todos os direitos reservados.
+        <div style="margin-top: 20px;">
+            <a href="tela_cliente.htm" class="btn btn-primary" style="display:inline-block; margin-top:10px; background:#1a5a4d; color:#fff;">Ir para a Área do Cliente</a>
+        </div>
+    </footer>
+    <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        window.location.href = 'tela_cliente.htm';
+    });
+    document.getElementById('registerLink').addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Funcionalidade de cadastro em breve!');
+    });
+    </script>
+</body>
+</html>

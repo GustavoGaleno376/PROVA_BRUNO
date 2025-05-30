@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Ana Clara - Dermatologista | VitaMed</title>
+    <link rel="stylesheet" href="css/dr_carlos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .whatsapp-style {
+            background: #ece5dd;
+            border-radius: 12px;
+            padding: 0;
+            min-height: 400px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+        }
+        .whatsapp-messages {
+            background: #ece5dd;
+            flex: 1;
+            padding: 20px 10px 10px 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .message.patient {
+            background: #dcf8c6;
+            color: #222;
+            align-self: flex-end;
+            border-radius: 18px 18px 4px 18px;
+            max-width: 70%;
+            padding: 10px 16px;
+            font-size: 1rem;
+            margin-bottom: 2px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+        }
+        .message.doctor {
+            background: #fff;
+            color: #222;
+            align-self: flex-start;
+            border-radius: 18px 18px 18px 4px;
+            max-width: 70%;
+            padding: 10px 16px;
+            font-size: 1rem;
+            margin-bottom: 2px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+        }
+        .whatsapp-input-area {
+            background: #f7f7f7;
+            padding: 10px 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-top: 1px solid #ddd;
+        }
+        .whatsapp-input {
+            flex: 1;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 16px;
+            font-size: 1rem;
+            outline: none;
+            background: #fff;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+        }
+        .send-btn {
+            background: #25d366;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .send-btn:hover {
+            background: #128c7e;
+        }
+        .attach-btn {
+            background: #fff;
+            color: #888;
+            border: none;
+            box-shadow: none;
+        }
+        .attach-btn:hover {
+            background: #e0e0e0;
+            color: #222;
+        }
+        .audio-btn {
+            background: #fff;
+            color: #25d366;
+            border: none;
+            box-shadow: none;
+        }
+        .audio-btn:hover {
+            background: #e0e0e0;
+            color: #128c7e;
+        }
+        .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #2a5bd7; /* Example blue color - adjust as needed */
+}
+
+.logo-text:last-child {
+    margin-top: -0.8rem; /* Overlap effect for the duplicated text */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2a5bd7;
+}
+
+.action-btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #2a5bd7;
+    color: white !important;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #1e4ac4;
+}
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+body { padding-top: 90px; }
+.header.fixed-header {
+    padding: 0.5rem 0;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 100vw;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+.logo img {
+    height: 44px;
+    width: auto;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #1a5a4d;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s;
+    position: relative;
+}
+.nav-links a:not(.action-btn):hover {
+    color: #A0DED6;
+}
+.nav-links .action-btn {
+    background: #1a5a4d;
+    color: #fff;
+    padding: 8px 22px;
+    border-radius: 22px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.nav-links .action-btn:hover {
+    background: #A0DED6;
+    color: #1a5a4d;
+}
+    </style>
+</head>
+<body>
+    <header class="header fixed-header">
+    <div class="header-container" style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px;width:100vw;">
+        <a href="tela_cliente.htm" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+            <img src="svg.svg" alt="VitaMed Logo" style="height:44px;width:auto;">
+        </a>
+        <nav class="nav-links" style="display:flex;align-items:center;gap:28px;">
+            <a href="tela_cliente.htm">Home</a>
+            <a href="imc.htm">IMC</a>
+            <a href="catalogo_medicos.htm">Médicos</a>
+            <a href="sobre_nos.htm">Sobre Nós</a>
+            <a href="login.htm" class="action-btn" style="background:#1a5a4d;color:#fff;padding:8px 22px;border-radius:22px;font-weight:600;">Login</a>
+        </nav>
+    </div>
+</header>
+    <div class="doctor-profile">
+    <div class="profile-sidebar">
+        <img src="https://img.freepik.com/fotos-premium/pronto-para-assumir-outro-dia-foto-de-uma-jovem-medica-no-trabalho_590464-62611.jpg" alt="Dra. Ana Clara" class="doctor-photo">
+        <h1 class="doctor-name">Dra. Ana Clara</h1>
+        <p class="doctor-specialty">Dermatologista</p>
+        <div class="rating">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <span class="rating-text">4.9 (245 avaliações)</span>
+        </div>
+        <div class="quick-info">
+            <div class="info-item">
+                <i class="fas fa-graduation-cap info-icon"></i>
+                <span>10 anos de experiência</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt info-icon"></i>
+                <span>Rio de Janeiro, RJ</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-certificate info-icon"></i>
+                <span>CRM 654321-RJ</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-clock info-icon"></i>
+                <span id="status">Online agora</span>
+            </div>
+        </div>
+        <div class="consultation-price">
+            <div class="price-label">Consulta Online</div>
+            <div class="price-value">R$ 120</div>
+            <div class="price-label">40 minutos</div>
+        </div>
+        <button class="chat-btn" onclick="switchTab('chat')">
+            <i class="fas fa-comments"></i> Iniciar Chat
+        </button>
+    </div>
+    <div class="profile-content">
+        <div class="content-tabs">
+            <button class="tab-btn active" onclick="switchTab('biography')">
+                <i class="fas fa-user"></i> Biografia
+            </button>
+            <button class="tab-btn" onclick="switchTab('chat')">
+                <i class="fas fa-comments"></i> Chat Médico
+            </button>
+        </div>
+        <div class="tab-content">
+            <div id="biography" class="tab-pane active">
+                <div class="bio-section">
+                    <h2 class="bio-title">Sobre a Dra. Ana Clara</h2>
+                    <p class="bio-text">
+                        Dra. Ana Clara é dermatologista com 10 anos de experiência em dermatologia clínica e estética. Formada pela UFRJ, é referência em tratamentos de pele, cabelos e unhas, além de procedimentos estéticos minimamente invasivos.
+                    </p>
+                    <p class="bio-text">
+                        Atua em clínicas renomadas do Rio de Janeiro e é membro da Sociedade Brasileira de Dermatologia. Sua abordagem é focada no bem-estar e autoestima dos pacientes.
+                    </p>
+                </div>
+                <div class="bio-section">
+                    <h2 class="bio-title">Formação e Certificações</h2>
+                    <ul class="credentials-list">
+                        <li><i class="fas fa-graduation-cap"></i> Graduação em Medicina - UFRJ (2012)</li>
+                        <li><i class="fas fa-certificate"></i> Residência em Dermatologia - UFRJ (2015)</li>
+                        <li><i class="fas fa-medal"></i> Título de Especialista em Dermatologia - SBD</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="chat" class="tab-pane">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <img src="https://img.freepik.com/fotos-premium/pronto-para-assumir-outro-dia-foto-de-uma-jovem-medica-no-trabalho_590464-62611.jpg" alt="Dra. Ana Clara" class="doctor-photo" style="width:40px;height:40px;">
+                        <div>
+                            <div class="doctor-name" style="font-size:1rem;">Dra. Ana Clara</div>
+                            <div id="chat-status" style="font-size:0.9rem;color:#888;">Online agora</div>
+                        </div>
+                    </div>
+                    <div class="chat-messages" id="chatMessages"></div>
+                    <div class="chat-input-area">
+                        <input type="text" id="messageInput" class="chat-input" placeholder="Digite sua mensagem...">
+                        <button class="send-btn" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+                        <input type="file" id="fileInput" accept="image/*,audio/*" style="display:none;">
+                        <button class="send-btn" onclick="document.getElementById('fileInput').click()"><i class="fas fa-paperclip"></i></button>
+                        <button class="send-btn" onclick="sendAudio()"><i class="fas fa-microphone"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+    document.querySelector(`.tab-btn[onclick="switchTab('${tabId}')"]`).classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+    if(tabId === 'chat') {
+        document.getElementById('chat').style.display = 'block';
+        document.getElementById('biography').style.display = 'none';
+    } else {
+        document.getElementById('chat').style.display = 'none';
+        document.getElementById('biography').style.display = 'block';
+    }
+}
+// Chat status simulado
+function updateStatus() {
+    const status = document.getElementById('chat-status');
+    if (Math.random() > 0.5) {
+        status.textContent = 'Online agora';
+    } else {
+        status.textContent = 'Visto por último há 5 minutos';
+    }
+}
+setInterval(updateStatus, 8000);
+// Envio de mensagem
+function sendMessage() {
+    const input = document.getElementById('messageInput');
+    const message = input.value.trim();
+    if (message) {
+        const messagesContainer = document.getElementById('chatMessages');
+        const patientMessage = document.createElement('div');
+        patientMessage.className = 'message patient';
+        patientMessage.textContent = message;
+        messagesContainer.appendChild(patientMessage);
+        input.value = '';
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        // Resposta automática da médica após 1 segundo
+        setTimeout(() => {
+            const doctorMessage = document.createElement('div');
+            doctorMessage.className = 'message doctor';
+            const respostas = [
+                'Olá! Como posso ajudar você hoje?',
+                'Poderia me dar mais detalhes sobre sua dúvida?',
+                'Estou à disposição para esclarecer suas perguntas.',
+                'Obrigada pelo contato! Me conte mais sobre seu caso.',
+                'Vamos cuidar da sua saúde juntos!'
+            ];
+            doctorMessage.textContent = respostas[Math.floor(Math.random() * respostas.length)];
+            messagesContainer.appendChild(doctorMessage);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }, 1000);
+    }
+}
+// Envio de áudio (simulado)
+function sendAudio() {
+    const messagesContainer = document.getElementById('chatMessages');
+    const audioMsg = document.createElement('div');
+    audioMsg.className = 'message patient';
+    audioMsg.innerHTML = '<i class="fas fa-microphone"></i> [Áudio enviado]';
+    messagesContainer.appendChild(audioMsg);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+// Envio de foto/arquivo
+document.getElementById('fileInput').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (file) {
+        const messagesContainer = document.getElementById('chatMessages');
+        const fileMsg = document.createElement('div');
+        fileMsg.className = 'message patient';
+        if (file.type.startsWith('image/')) {
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(file);
+            img.style.maxWidth = '120px';
+            img.style.borderRadius = '8px';
+            fileMsg.appendChild(img);
+        } else if (file.type.startsWith('audio/')) {
+            fileMsg.innerHTML = '<i class="fas fa-microphone"></i> [Áudio enviado]';
+        } else {
+            fileMsg.textContent = '[Arquivo enviado]';
+        }
+        messagesContainer.appendChild(fileMsg);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+});
+    </script>
+</body>
+</html>

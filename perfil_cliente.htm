@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil | VitaMed</title>
+    <link rel="stylesheet" href="css/tela_cliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #A0DED6 0%, #1a5a4d 100%);
+            min-height: 100vh;
+        }
+        .profile-container {
+            max-width: 520px;
+            margin: 70px auto 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+            padding: 44px 36px 36px 36px;
+            text-align: center;
+        }
+        .profile-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #A0DED6;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .profile-title {
+            color: #1a5a4d;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .profile-email {
+            color: #888;
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+        }
+        .profile-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+        .profile-form label {
+            color: #1a5a4d;
+            font-weight: 600;
+            margin-bottom: 4px;
+            text-align: left;
+        }
+        .profile-form input, .profile-form select {
+            padding: 12px;
+            border: 1px solid #A0DED6;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        .profile-form .profile-btn {
+            background: #1a5a4d;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 18px;
+        }
+        .profile-form .profile-btn:hover {
+            background: #A0DED6;
+            color: #1a5a4d;
+        }
+        .profile-success {
+            color: #1a5a4d;
+            background: #e8f7f4;
+            border-radius: 8px;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 18px;
+            font-weight: 600;
+        }
+        .profile-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 24px;
+            gap: 12px;
+        }
+        .profile-actions button {
+            flex: 1;
+            background: #fff;
+            color: #1a5a4d;
+            border: 1px solid #A0DED6;
+            border-radius: 22px;
+            padding: 10px 0;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+        .profile-actions button:hover {
+            background: #A0DED6;
+            color: #fff;
+        }
+        .profile-form .avatar-upload {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .profile-form .avatar-upload label {
+            color: #1a5a4d;
+            font-size: 0.98rem;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        .profile-form .avatar-upload input[type="file"] {
+            display: none;
+        }
+        .profile-form .avatar-upload .avatar-btn {
+            background: #A0DED6;
+            color: #1a5a4d;
+            border: none;
+            border-radius: 18px;
+            padding: 7px 18px;
+            font-size: 0.98rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 4px;
+        }
+        .profile-form .avatar-upload .avatar-btn:hover {
+            background: #1a5a4d;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header fixed-header">
+        <div class="header-container" style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px;width:100vw;">
+            <a href="tela_cliente.htm" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+                <img src="svg.svg" alt="VitaMed Logo" style="height:44px;width:auto;">
+            </a>
+            <nav class="nav-links" style="display:flex;align-items:center;gap:28px;">
+                <a href="tela_cliente.htm">Home</a>
+                <a href="imc.htm">IMC</a>
+                <a href="catalogo_medicos.htm">Médicos</a>
+                <a href="sobre_nos.htm">Sobre Nós</a>
+                <a href="#" class="user-icon" style="background:none;padding:0;border-radius:50%;"><i class="fas fa-user-circle" style="font-size:2rem;color:#1a5a4d;"></i></a>
+            </nav>
+        </div>
+    </header>
+    <div class="profile-container">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avatar" class="profile-avatar" id="profileAvatar">
+        <h1 class="profile-title" id="profileName">Usuário VitaMed</h1>
+        <div class="profile-email" id="profileEmail">usuario@vitamed.com</div>
+        <form class="profile-form" id="profileForm">
+            <div class="avatar-upload">
+                <label for="avatar">Foto de Perfil</label>
+                <input type="file" id="avatar" accept="image/*">
+                <button type="button" class="avatar-btn" onclick="document.getElementById('avatar').click()"><i class="fas fa-camera"></i> Alterar Foto</button>
+            </div>
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" value="Usuário VitaMed" required>
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" value="usuario@vitamed.com" required>
+            </div>
+            <div>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" value="12345678" required>
+            </div>
+            <div>
+                <label for="genero">Gênero</label>
+                <select id="genero" name="genero">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+            <div>
+                <label for="nascimento">Data de Nascimento</label>
+                <input type="date" id="nascimento" name="nascimento" value="2000-01-01">
+            </div>
+            <button type="submit" class="profile-btn">Salvar Alterações</button>
+        </form>
+        <div class="profile-success" id="profileSuccess" style="display:none;">Alterações salvas com sucesso!</div>
+        <div class="profile-actions">
+            <button onclick="alert('Funcionalidade de notificações em breve!')"><i class="fas fa-bell"></i> Notificações</button>
+            <button onclick="alert('Funcionalidade de histórico em breve!')"><i class="fas fa-history"></i> Histórico</button>
+            <button onclick="alert('Funcionalidade de sair em breve!')"><i class="fas fa-sign-out-alt"></i> Sair</button>
+        </div>
+    </div>
+    <script>
+    document.getElementById('profileForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('profileName').textContent = document.getElementById('nome').value;
+        document.getElementById('profileEmail').textContent = document.getElementById('email').value;
+        document.getElementById('profileSuccess').style.display = 'block';
+        setTimeout(function(){
+            document.getElementById('profileSuccess').style.display = 'none';
+        }, 2500);
+    });
+    document.getElementById('avatar').addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                document.getElementById('profileAvatar').src = evt.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+    </script>
+</body>
+</html>

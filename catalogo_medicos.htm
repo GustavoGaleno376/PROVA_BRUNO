@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Médicos | VitaMed</title>
+    <link rel="stylesheet" href="css/tela_cliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        body { padding-top: 80px; }
+        .header .nav-links a {
+            text-decoration: none;
+            color: #1a5a4d;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .header .nav-links a:not(.action-btn):hover {
+            color: #A0DED6;
+        }
+        .header .nav-links .action-btn:hover {
+            background: #A0DED6;
+            color: #1a5a4d;
+        }
+    </style>
+</head>
+<body>
+    <header class="header fixed-header">
+        <div class="header-container" style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px;width:100vw;">
+            <a href="tela_cliente.htm" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+                <img src="svg.svg" alt="VitaMed Logo" style="height:44px;width:auto;">
+            </a>
+            <nav class="nav-links" style="display:flex;align-items:center;gap:28px;">
+                <a href="tela_cliente.htm">Home</a>
+                <a href="imc.htm">IMC</a>
+                <a href="catalogo_medicos.htm">Médicos</a>
+                <a href="sobre_nos.htm">Sobre Nós</a>
+                <a href="login.htm" class="action-btn" style="background:#1a5a4d;color:#fff;padding:8px 22px;border-radius:22px;font-weight:600;">Login</a>
+            </nav>
+        </div>
+    </header>
+    <section class="doctors-section" id="medicos">
+        <div class="section-container">
+            <h2 class="section-title">Catálogo de Médicos</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://img.freepik.com/fotos-premium/joven-medico-africano-blanco-aislado-fonendoscopio_105818-414.jpg" alt="Dr. Carlos Eduardo">
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Carlos Eduardo</h3>
+                        <span class="doctor-specialty">Cardiologista</span>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(128 avaliações)</span>
+                        </div>
+                        <p class="doctor-bio">Especialista em cardiologia intervencionista com mais de 15 anos de experiência.</p>
+                        <a href="dr_carlos.htm" class="doctor-btn">Ver Perfil</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://img.freepik.com/fotos-premium/pronto-para-assumir-outro-dia-foto-de-uma-jovem-medica-no-trabalho_590464-62611.jpg" alt="Dra. Ana Clara">
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dra. Ana Clara</h3>
+                        <span class="doctor-specialty">Dermatologista</span>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(245 avaliações)</span>
+                        </div>
+                        <p class="doctor-bio">Especialista em dermatologia clínica e estética, membro da Sociedade Brasileira de Dermatologia.</p>
+                        <a href="dr_ana_clara.htm" class="doctor-btn">Ver Perfil</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://img.freepik.com/fotos-premium/retrato-da-bela-jovem-medica-na-jaqueta-medica-branca-isolada-no-fundo-branco-medica-morena-cruzou-as-maos-e-sorrindo-para-a-camera_533057-127.jpg" alt="Dra. Juliana Santos">
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dra. Juliana Santos</h3>
+                        <span class="doctor-specialty">Pediatra</span>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(312 avaliações)</span>
+                        </div>
+                        <p class="doctor-bio">Pediatra com especialização em neonatologia, atendendo crianças desde o nascimento até a adolescência.</p>
+                        <a href="dra_juliana_santos.htm" class="doctor-btn">Ver Perfil</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://img.freepik.com/fotos-gratis/medico-com-os-bracos-cruzados-sobre-fundo-branco_1368-5790.jpg?semt=ais_hybrid&w=740" alt="Dr. Roberto Almeida">
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Roberto Almeida</h3>
+                        <span class="doctor-specialty">Ortopedista</span>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(87 avaliações)</span>
+                        </div>
+                        <p class="doctor-bio">Especialista em cirurgia do joelho e trauma ortopédico, com vasta experiência em medicina esportiva.</p>
+                        <a href="dr_roberto_almeida.htm" class="doctor-btn">Ver Perfil</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://img.freepik.com/fotos-premium/conceito-de-medicina-saude-profissao-e-pessoas-retrato-de-uma-medica-branca-europeia-cruzando-os-bracos-em-uma-bata-medica-usando-um-estetoscopio-do-lado-de-fora-em-um-tempo-ensolarado-olhando-para-longe_271445-82.jpg" alt="Dra. Camila Ribeiro">
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dra. Camila Ribeiro</h3>
+                        <span class="doctor-specialty">Ginecologista</span>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(210 avaliações)</span>
+                        </div>
+                        <p class="doctor-bio">Especialista em saúde da mulher, pré-natal e ginecologia preventiva.</p>
+                        <a href="dra_camila_ribeiro.htm" class="doctor-btn">Ver Perfil</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://img.freepik.com/fotos-premium/medico-brasileiro-sobre-fundo-branco-isolado-apresentando-uma-ideia-enquanto-olha-sorrindo-para_1368-458039.jpg" alt="Dr. André Lima">
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. André Lima</h3>
+                        <span class="doctor-specialty">Endocrinologista</span>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(77 avaliações)</span>
+                        </div>
+                        <p class="doctor-bio">Especialista em endocrinologia e metabologia, com foco em diabetes e tireoide.</p>
+                        <a href="dr_andre_lima.htm" class="doctor-btn">Ver Perfil</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://st2.depositphotos.com/3889193/8015/i/450/depositphotos_80150956-stock-photo-confiante-mulher-medico-com-roupa-branca-e-estetoscopio-sorrindo-e-olhando-para-a-camera.jpg" alt="Dra. Patrícia Torres">
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dra. Patrícia Torres</h3>
+                        <span class="doctor-specialty">Psiquiatra</span>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(98 avaliações)</span>
+                        </div>
+                        <p class="doctor-bio">Especialista em psiquiatria clínica, com experiência em transtornos de humor e ansiedade.</p>
+                        <a href="dra_patricia_torres.htm" class="doctor-btn">Ver Perfil</a>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://st3.depositphotos.com/12982378/33785/i/450/depositphotos_337857420-stock-photo-smiling-doctor-stethoscope-looking-camera.jpg" alt="Dr. Gustavo Lima">
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Gustavo Lima</h3>
+                        <span class="doctor-specialty">Clínico Geral</span>
+                        <div class="doctor-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(134 avaliações)</span>
+                        </div>
+                        <p class="doctor-bio">Atendimento clínico geral, check-ups e acompanhamento de saúde preventiva.</p>
+                        <a href="dr_gustavo_lima.htm" class="doctor-btn">Ver Perfil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo"><span>Vita</span>Med</div>
+            <p class="footer-about">Conectando você aos melhores especialistas em saúde, com cuidado e excelência.</p>
+        </div>
+    </footer>
+</body>
+</html>

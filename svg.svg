@@ -1,0 +1,8 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <path d="M35,25 C35,15 50,10 55,18 C60,10 75,15 75,25 C75,35 55,48 55,48 C55,48 35,35 35,25Z" 
+        fill="#1a5a4d" fill-opacity="0.9"/>
+  <path d="M55 20V40M45 30H65" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <text x="85" y="38" font-family="Arial" font-size="26" font-weight="bold">
+    <tspan fill="#000">Vita</tspan><tspan fill="#1a5a4d">Med</tspan>
+  </text>
+</svg>

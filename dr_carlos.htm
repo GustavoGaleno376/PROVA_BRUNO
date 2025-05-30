@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Carlos Eduardo - Cardiologista | VitaMed</title>
+    <link rel="stylesheet" href="css/dr_carlos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        body { padding-top: 80px; }
+        .header .nav-links a {
+            text-decoration: none;
+            color: #1a5a4d;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .header .nav-links a:not(.action-btn):hover {
+            color: #A0DED6;
+        }
+        .header .nav-links .action-btn:hover {
+            background: #A0DED6;
+            color: #1a5a4d;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header fixed-header">
+        <div class="header-container" style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px;width:100vw;">
+            <a href="tela_cliente.htm" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+                <img src="svg.svg" alt="VitaMed Logo" style="height:44px;width:auto;">
+            </a>
+            <nav class="nav-links" style="display:flex;align-items:center;gap:28px;">
+                <a href="tela_cliente.htm">Home</a>
+                <a href="imc.htm">IMC</a>
+                <a href="catalogo_medicos.htm">Médicos</a>
+                <a href="sobre_nos.htm">Sobre Nós</a>
+                <a href="login.htm" class="action-btn" style="background:#1a5a4d;color:#fff;padding:8px 22px;border-radius:22px;font-weight:600;">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Doctor Profile -->
+    <div class="doctor-profile">
+        <!-- Sidebar -->
+        <div class="profile-sidebar">
+            <img src="https://img.freepik.com/fotos-premium/joven-medico-africano-blanco-aislado-fonendoscopio_105818-414.jpg" alt="Dr. Carlos Eduardo" class="doctor-photo">
+            <h1 class="doctor-name">Dr. Carlos Eduardo</h1>
+            <p class="doctor-specialty">Cardiologista</p>
+            
+            <div class="rating">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="rating-text">4.8 (128 avaliações)</span>
+            </div>
+            
+            <div class="quick-info">
+                <div class="info-item">
+                    <i class="fas fa-graduation-cap info-icon"></i>
+                    <span>15 anos de experiência</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt info-icon"></i>
+                    <span>São Paulo, SP</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-certificate info-icon"></i>
+                    <span>CRM 123456-SP</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock info-icon"></i>
+                    <span>Online agora</span>
+                </div>
+            </div>
+            
+            <div class="consultation-price">
+                <div class="price-label">Consulta Online</div>
+                <div class="price-value">R$ 150</div>
+                <div class="price-label">50 minutos</div>
+            </div>
+            
+            <button class="chat-btn" onclick="checkChatAccess()">
+                <i class="fas fa-comments"></i> Iniciar Chat
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="profile-content">
+            <div class="content-tabs">
+                <button class="tab-btn active" onclick="switchTab('biography')">
+                    <i class="fas fa-user"></i> Biografia
+                </button>
+                <button class="tab-btn" onclick="switchTab('chat')">
+                    <i class="fas fa-comments"></i> Chat Médico
+                </button>
+            </div>
+            
+            <div class="tab-content">
+                <!-- Biography Tab -->
+                <div id="biography" class="tab-pane active">
+                    <div class="bio-section">
+                        <h2 class="bio-title">Sobre o Dr. Carlos Eduardo</h2>
+                        <p class="bio-text">
+                            Dr. Carlos Eduardo é um cardiologista renomado com mais de 15 anos de experiência em cardiologia clínica e intervencionista. Formado pela Universidade de São Paulo (USP), possui especialização em hemodinâmica e cardiologia intervencionista pelo Instituto do Coração (InCor).
+                        </p>
+                        <p class="bio-text">
+                            Durante sua carreira, realizou mais de 3.000 procedimentos de cateterismo cardíaco e angioplastia, sendo referência no tratamento de doenças coronarianas complexas. Atualmente, é membro titular da Sociedade Brasileira de Cardiologia e da Sociedade Brasileira de Hemodinâmica e Cardiologia Intervencionista.
+                        </p>
+                        <p class="bio-text">
+                            Dr. Carlos Eduardo dedica-se também ao ensino, sendo preceptor de residentes em cardiologia e palestrante em congressos nacionais e internacionais. Sua abordagem humanizada e uso de tecnologias de ponta o tornam um dos cardiologistas mais procurados de São Paulo.
+                        </p>
+                    </div>
+                    
+                    <div class="bio-section">
+                        <h2 class="bio-title">Formação e Certificações</h2>
+                        <ul class="credentials-list">
+                            <li>
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Graduação em Medicina - USP (2008)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-certificate"></i>
+                                <span>Residência em Cardiologia - InCor/USP (2011)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-medal"></i>
+                                <span>Especialização em Hemodinâmica - InCor/USP (2013)</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-award"></i>
+                                <span>Título de Especialista em Cardiologia - SBC</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-star"></i>
+                                <span>Membro da Sociedade Brasileira de Cardiologia</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-heart"></i>
+                                <span>Especialista em Cardiologia Intervencionista - SBHCI</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bio-section">
+                        <h2 class="bio-title">Áreas de Especialização</h2>
+                        <ul class="credentials-list">
+                            <li>
+                                <i class="fas fa-heartbeat"></i>
+                                <span>Cardiologia Preventiva</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-procedures"></i>
+                                <span>Cateterismo Cardíaco</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-band-aid"></i>
+                                <span>Angioplastia Coronária</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-stethoscope"></i>
+                                <span>Doenças Coronarianas</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-heart-pulse"></i>
+                                <span>Arritmias Cardíacas</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-activity"></i>
+                                <span>Insuficiência Cardíaca</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Chat Tab -->
+                <div id="chat" class="tab-pane">
+                    <div class="chat-container">
+                        <div id="chat-locked" class="chat-locked">
+                            <i class="fas fa-lock lock-icon"></i>
+                            <h3>Chat Médico Privado</h3>
+                            <p>Para conversar com o Dr. Carlos Eduardo, é necessário realizar o pagamento da consulta online.</p>
+                            <p><strong>Valor: R$ 150,00</strong> | Duração: 50 minutos</p>
+                            <button class="unlock-btn" onclick="openPaymentModal()">
+                                <i class="fas fa-credit-card"></i> Pagar e Desbloquear Chat
+                            </button>
+                        </div>
+                        
+                        <div id="chat-active" style="display: none;">
+                            <div class="chat-header">
+                                <img src="https://img.freepik.com/fotos-premium/joven-medico-africano-blanco-aislado-fonendoscopio_105818-414.jpg" alt="Dr. Carlos Eduardo" class="doctor-photo" style="width:40px;height:40px;">
+                                <div>
+                                    <div class="doctor-name" style="font-size:1rem;">Dr. Carlos Eduardo</div>
+                                    <div id="chat-status" style="font-size:0.9rem;color:#888;">Online agora</div>
+                                </div>
+                            </div>
+                            
+                            <div class="chat-messages" id="chatMessages">
+                                <div class="message doctor">
+                                    Olá! Sou o Dr. Carlos Eduardo. Como posso ajudá-lo hoje?
+                                </div>
+                            </div>
+                            
+                            <div class="chat-input-area">
+                                <input type="text" class="chat-input" id="messageInput" placeholder="Digite sua mensagem...">
+                                <button class="send-btn" onclick="sendMessage()">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Pagamento da Consulta</h2>
+                <span class="close" onclick="closePaymentModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="payment-form">
+                    <div class="payment-summary">
+                        <div class="summary-row">
+                            <span>Consulta com Dr. Carlos Eduardo</span>
+                            <span>R$ 150,00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Duração</span>
+                            <span>50 minutos</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Taxa da plataforma</span>
+                            <span>R$ 5,00</span>
+                        </div>
+                        <div class="summary-row summary-total">
+                            <span>Total</span>
+                            <span>R$ 155,00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <h3 class="method-title">Forma de Pagamento</h3>
+                        
+                        <label class="payment-method" for="credit-card">
+                            <input type="radio" id="credit-card" name="payment" value="credit-card" checked>
+                            <i class="fas fa-credit-card method-icon" style="color: #007bff;"></i>
+                            <div class="method-info">
+                                <div class="method-name">Cartão de Crédito</div>
+                                <div class="method-desc">Visa, Mastercard, Elo</div>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-method" for="pix">
+                            <input type="radio" id="pix" name="payment" value="pix">
+                            <i class="fas fa-qrcode method-icon" style="color: #32CD32;"></i>
+                            <div class="method-info">
+                                <div class="method-name">PIX</div>
+                                <div class="method-desc">Pagamento instantâneo</div>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <div id="credit-card-form" class="card-form active">
+                        <div class="form-group">
+                            <label for="card-number">Número do Cartão</label>
+                            <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="card-name">Nome no Cartão</label>
+                            <input type="text" id="card-name" placeholder="Nome como está no cartão">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="card-expiry">Validade</label>
+                                <input type="text" id="card-expiry" placeholder="MM/AA">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="card-cvv">CVV</label>
+                                <input type="text" id="card-cvv" placeholder="123">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="pix-form" class="card-form">
+                        <div class="success-animation">
+                            <i class="fas fa-qrcode success-icon"></i>
+                            <h3 class="success-title">PIX Copia e Cola</h3>
+                            <p class="success-text">00020126580014BR.GOV.BCB.PIX0136123e4567-e12b-12d1-a456-426655440000520400005303986540515.005802BR5913Fulano de Tal6008BRASILIA62070503***6304A13A</p>
+                            <p>Ou escaneie o QR Code abaixo:</p>
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=PIX123456789" alt="QR Code PIX" style="margin-top: 15px;">
+                        </div>
+                    </div>
+                    
+                    <button class="pay-btn" onclick="processPayment()">
+                        <i class="fas fa-lock"></i> Confirmar Pagamento
+                    </button>
+                </div>
+                
+                <div id="payment-success" style="display: none;">
+                    <div class="success-animation">
+                        <i class="fas fa-check-circle success-icon"></i>
+                        <h3 class="success-title">Pagamento Confirmado!</h3>
+                        <p class="success-text">Sua consulta com o Dr. Carlos Eduardo foi agendada com sucesso. O chat foi liberado para você.</p>
+                        <button class="primary-btn" onclick="closePaymentModal()" style="margin-top: 20px;">
+                            <i class="fas fa-comments"></i> Ir para o Chat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dr_carlos.js"></script>
+</body>
+</html>

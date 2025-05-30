@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC | VitaMed</title>
+    <link rel="stylesheet" href="css/tela_cliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .imc-container {
+            max-width: 400px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .imc-title {
+            color: #1a5a4d;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .imc-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+        .imc-form input {
+            padding: 12px;
+            border: 1px solid #A0DED6;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        .imc-btn {
+            background: #1a5a4d;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .imc-btn:hover {
+            background: #A0DED6;
+            color: #1a5a4d;
+        }
+        .imc-result {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #1a5a4d;
+            font-weight: 600;
+        }
+        .imc-invite {
+            margin-top: 35px;
+            background: #e8f7f4;
+            border-radius: 12px;
+            padding: 24px 18px;
+        }
+        .imc-invite h3 {
+            color: #1a5a4d;
+            margin-bottom: 10px;
+        }
+        .imc-invite p {
+            color: #444;
+            margin-bottom: 18px;
+        }
+        .imc-invite .primary-btn {
+            background: #1a5a4d;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .imc-invite .primary-btn:hover {
+            background: #A0DED6;
+            color: #1a5a4d;
+        }
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            z-index: 1000;
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        body { padding-top: 80px; }
+        .header .nav-links a {
+            text-decoration: none;
+            color: #1a5a4d;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.2s;
+            position: relative;
+        }
+        .header .nav-links a:not(.action-btn):hover {
+            color: #A0DED6;
+        }
+        .header .nav-links .action-btn:hover {
+            background: #A0DED6;
+            color: #1a5a4d;
+        }
+    </style>
+</head>
+<body>
+    <header class="header fixed-header">
+        <div class="header-container" style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px;width:100vw;">
+            <a href="tela_cliente.htm" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+                <img src="svg.svg" alt="VitaMed Logo" style="height:44px;width:auto;">
+            </a>
+            <nav class="nav-links" style="display:flex;align-items:center;gap:28px;">
+                <a href="tela_cliente.htm">Home</a>
+                <a href="imc.htm">IMC</a>
+                <a href="catalogo_medicos.htm">Médicos</a>
+                <a href="sobre_nos.htm">Sobre Nós</a>
+                <a href="login.htm" class="action-btn" style="background:#1a5a4d;color:#fff;padding:8px 22px;border-radius:22px;font-weight:600;">Login</a>
+            </nav>
+        </div>
+    </header>
+    <div class="imc-container">
+        <h1 class="imc-title">Calculadora de IMC</h1>
+        <form class="imc-form" id="imcForm">
+            <input type="number" id="peso" placeholder="Peso (kg)" min="1" required>
+            <input type="number" id="altura" placeholder="Altura (cm)" min="1" required>
+            <button type="submit" class="imc-btn">Calcular IMC</button>
+        </form>
+        <div class="imc-result" id="imcResult"></div>
+        <div class="imc-invite" id="imcInvite" style="display:none;">
+            <h3>Cuide da sua saúde com a VitaMed!</h3>
+            <p>Assine nossa plataforma e tenha acesso a médicos especialistas, agendamento online, chat exclusivo e muito mais.</p>
+            <a href="login.htm" class="primary-btn">Assinar Agora</a>
+        </div>
+    </div>
+    <script>
+    document.getElementById('imcForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const peso = parseFloat(document.getElementById('peso').value);
+        const altura = parseFloat(document.getElementById('altura').value) / 100;
+        if (peso > 0 && altura > 0) {
+            const imc = peso / (altura * altura);
+            let classificacao = '';
+            if (imc < 18.5) classificacao = 'Abaixo do peso';
+            else if (imc < 25) classificacao = 'Peso normal';
+            else if (imc < 30) classificacao = 'Sobrepeso';
+            else if (imc < 35) classificacao = 'Obesidade grau I';
+            else if (imc < 40) classificacao = 'Obesidade grau II';
+            else classificacao = 'Obesidade grau III';
+            document.getElementById('imcResult').textContent = `Seu IMC é ${imc.toFixed(2)} (${classificacao})`;
+            document.getElementById('imcInvite').style.display = 'block';
+        } else {
+            document.getElementById('imcResult').textContent = 'Preencha os campos corretamente.';
+            document.getElementById('imcInvite').style.display = 'none';
+        }
+    });
+    </script>
+</body>
+</html>
