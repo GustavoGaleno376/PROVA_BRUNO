@@ -43,10 +43,13 @@
             </a>
             <nav class="nav-links" style="display:flex;align-items:center;gap:28px;">
                 <a href="tela_cliente.htm">Home</a>
+                <a href="meus_agendamentos.htm">Meus Agendamentos</a>
                 <a href="imc.htm">IMC</a>
                 <a href="catalogo_medicos.htm">Médicos</a>
                 <a href="sobre_nos.htm">Sobre Nós</a>
-                <a href="login.htm" class="action-btn" style="background:#1a5a4d;color:#fff;padding:8px 22px;border-radius:22px;font-weight:600;">Login</a>
+                <span class="user-icon" style="margin-left:18px;cursor:pointer;" title="Meu Perfil" onclick="window.location.href='perfil_cliente.htm'">
+                    <i class="fas fa-user-circle" style="font-size:2rem;color:#1a5a4d;"></i>
+                </span>
             </nav>
         </div>
     </header>
@@ -225,6 +228,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <div class="doctor-actions" style="margin-top:24px;display:flex;gap:18px;flex-wrap:wrap;">
+                <button class="primary-btn" style="background:#25d366;" onclick="alert('Pagamento realizado com sucesso! O comprovante estará disponível em Meus Agendamentos.')"><i class="fas fa-credit-card"></i> Pagar Consulta</button>
+                <a href="tela_cliente.htm" class="secondary-btn" style="border:2px solid #1a5a4d;color:#1a5a4d;background:#fff;"><i class="fas fa-arrow-left"></i> Voltar</a>
             </div>
         </div>
     </div>

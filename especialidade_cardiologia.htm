@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialidade - Cardiologia | VitaMed</title>
+    <link rel="icon" type="image/svg+xml" href="svg.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { background: #f8f9fa; margin: 0; font-family: 'Arial', sans-serif; }
+        .header { background: #fff; box-shadow: 0 2px 15px rgba(0,0,0,0.08); padding: 18px 5%; position: sticky; top: 0; z-index: 1000; }
+        .header-container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; width: 100vw; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo img { height: 44px; width: auto; }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a { text-decoration: none; color: #1a5a4d; font-weight: 600; font-size: 1rem; transition: color 0.2s; }
+        .nav-links a:hover { color: #A0DED6; }
+        .main-content { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 18px; box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 36px 28px; }
+        .specialty-title { color: #1a5a4d; font-size: 2.2rem; font-weight: 700; margin-bottom: 18px; }
+        .specialty-desc { color: #444; font-size: 1.1rem; margin-bottom: 24px; }
+        .doctor-card { display: flex; align-items: center; gap: 28px; background: #f7fafc; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 24px; margin-bottom: 28px; }
+        .doctor-card img { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #A0DED6; }
+        .doctor-info { flex: 1; }
+        .doctor-info h3 { color: #1a5a4d; margin: 0 0 6px 0; }
+        .doctor-info .especialidade { color: #25d366; font-weight: 600; margin-bottom: 8px; display: block; }
+        .doctor-info .bio { color: #888; font-size: 0.98rem; margin-bottom: 8px; }
+        .doctor-info .rating { color: #FFD700; font-size: 1.1rem; margin-bottom: 8px; }
+        .section-block { margin-bottom: 32px; }
+        .section-block h4 { color: #1a5a4d; font-size: 1.1rem; margin-bottom: 10px; }
+        .section-block ul { color: #444; margin: 0 0 0 18px; padding: 0; }
+        .section-block li { margin-bottom: 6px; }
+        @media (max-width: 700px) { .main-content { padding: 10px; } .doctor-card { flex-direction: column; align-items: center; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="tela_cliente.htm" class="logo">
+                <img src="svg.svg" alt="VitaMed Logo">
+            </a>
+            <nav class="nav-links">
+                <a href="tela_cliente.htm">Home</a>
+                <a href="meus_agendamentos.htm">Meus Agendamentos</a>
+                <a href="imc.htm">IMC</a>
+                <a href="catalogo_medicos.htm">Médicos</a>
+                <a href="sobre_nos.htm">Sobre Nós</a>
+                <span class="user-icon" style="margin-left:18px;cursor:pointer;" title="Meu Perfil" onclick="window.location.href='perfil_cliente.htm'">
+                    <i class="fas fa-user-circle" style="font-size:2rem;color:#1a5a4d;"></i>
+                </span>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="specialty-title">Cardiologia</div>
+        <div class="specialty-desc">A cardiologia é a especialidade médica responsável pelo diagnóstico e tratamento das doenças do coração e do sistema circulatório.</div>
+        <div class="doctor-card">
+            <img src="https://img.freepik.com/fotos-premium/joven-medico-africano-blanco-aislado-fonendoscopio_105818-414.jpg" alt="Dr. Carlos Eduardo">
+            <div class="doctor-info">
+                <h3>Dr. Carlos Eduardo</h3>
+                <span class="especialidade">Cardiologista</span>
+                <div class="bio">Especialista em cardiologia intervencionista com mais de 15 anos de experiência.</div>
+                <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (128 avaliações)</div>
+                <a href="dr_carlos.htm" class="primary-btn" style="padding:7px 18px;font-size:0.98rem;background:#1a5a4d;color:#fff;border-radius:22px;text-decoration:none;">Ver Perfil</a>
+            </div>
+        </div>
+        <div class="section-block">
+            <h4>Principais Doenças Tratadas</h4>
+            <ul>
+                <li>Hipertensão arterial</li>
+                <li>Infarto agudo do miocárdio</li>
+                <li>Arritmias cardíacas</li>
+                <li>Insuficiência cardíaca</li>
+                <li>Doença arterial coronariana</li>
+            </ul>
+        </div>
+        <div class="section-block">
+            <h4>Causas Comuns</h4>
+            <ul>
+                <li>Tabagismo</li>
+                <li>Colesterol alto</li>
+                <li>Hipertensão não controlada</li>
+                <li>Obesidade</li>
+                <li>Sedentarismo</li>
+            </ul>
+        </div>
+        <div class="section-block">
+            <h4>Prevenção e Dicas</h4>
+            <ul>
+                <li>Pratique atividades físicas regularmente</li>
+                <li>Tenha uma alimentação equilibrada</li>
+                <li>Evite fumar e consumir álcool em excesso</li>
+                <li>Realize exames periódicos</li>
+                <li>Controle o estresse</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

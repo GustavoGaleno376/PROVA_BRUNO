@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VitaMed - Encontre Especialistas e Agende Consultas</title>
+    <title>VitaMed - Saúde e Bem-estar</title>
+    <link rel="icon" type="image/svg+xml" href="svg.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
@@ -15,24 +17,25 @@
             --bg-light: #f8f9fa;
             --white: #ffffff;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Arial', sans-serif;
         }
-        
+
         body {
             background-color: var(--bg-light);
             color: var(--text-dark);
-            padding-top: 90px; /* Espaço para o header fixo */
+            padding-top: 90px;
+            /* Espaço para o header fixo */
         }
-        
+
         /* Header */
         .header {
             background: var(--white);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             padding: 15px 5%;
             position: fixed;
             top: 0;
@@ -43,7 +46,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .header.fixed-header {
             position: fixed;
             top: 0;
@@ -51,9 +54,9 @@
             width: 100vw;
             z-index: 1000;
             background: #fff;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
         }
-        
+
         .header-container {
             display: flex;
             align-items: center;
@@ -63,25 +66,25 @@
             padding: 0 24px;
             width: 100vw;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
         }
-        
+
         .logo img {
             height: 44px;
             width: auto;
         }
-        
+
         .nav-links {
             display: flex;
             align-items: center;
             gap: 28px;
         }
-        
+
         .nav-links a {
             text-decoration: none;
             color: #1a5a4d;
@@ -90,11 +93,11 @@
             transition: color 0.2s;
             position: relative;
         }
-        
+
         .nav-links a:not(.action-btn):hover {
             color: #A0DED6;
         }
-        
+
         .nav-links .action-btn {
             background: #1a5a4d;
             color: #fff;
@@ -102,20 +105,22 @@
             border-radius: 22px;
             font-weight: 600;
         }
-        
+
         .nav-links .action-btn:hover {
             background: #A0DED6;
             color: #1a5a4d;
         }
-        
-        body { padding-top: 80px; }
-        
+
+        body {
+            padding-top: 80px;
+        }
+
         /* Hero Section */
         .hero-section {
             background: var(--bg-light);
             padding: 80px 5%;
         }
-        
+
         .hero-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -123,11 +128,11 @@
             align-items: center;
             gap: 50px;
         }
-        
+
         .hero-content {
             flex: 1;
         }
-        
+
         .hero-subtitle {
             font-size: 1rem;
             color: var(--primary-color);
@@ -135,7 +140,7 @@
             letter-spacing: 2px;
             margin-bottom: 15px;
         }
-        
+
         .hero-title {
             font-size: 3rem;
             color: var(--text-dark);
@@ -143,19 +148,19 @@
             line-height: 1.2;
             margin-bottom: 20px;
         }
-        
+
         .hero-description {
             color: var(--text-light);
             font-size: 1.1rem;
             line-height: 1.6;
             margin-bottom: 30px;
         }
-        
+
         .hero-buttons {
             display: flex;
             gap: 20px;
         }
-        
+
         .primary-btn {
             background: var(--primary-color);
             color: var(--white);
@@ -167,12 +172,12 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-        
+
         .primary-btn:hover {
             background: var(--secondary-color);
-            color: var(--primary-color);
+            color: var, --primary-color;
         }
-        
+
         .secondary-btn {
             background: transparent;
             color: var(--primary-color);
@@ -184,67 +189,67 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-        
+
         .secondary-btn:hover {
             background: var(--primary-color);
-            color: var(--white);
+            color: var, --white;
         }
-        
+
         .hero-image {
             flex: 1;
             display: flex;
             justify-content: center;
         }
-        
+
         .hero-image img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         /* Search Section */
         .search-section {
             background: var(--white);
             padding: 40px 5%;
             margin-top: 30px;
         }
-        
+
         .search-container {
             max-width: 1200px;
             margin: 0 auto;
             background: var(--white);
             border-radius: 15px;
             padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
-        
+
         .search-title {
             text-align: center;
             color: var(--primary-color);
             font-size: 2rem;
             margin-bottom: 30px;
         }
-        
+
         .search-form {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
-        
+
         .form-group {
             position: relative;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
             color: var(--text-dark);
             font-weight: 600;
         }
-        
-        .form-group input, 
+
+        .form-group input,
         .form-group select {
             width: 100%;
             padding: 12px 15px;
@@ -253,14 +258,14 @@
             font-size: 1rem;
             transition: all 0.3s;
         }
-        
-        .form-group input:focus, 
+
+        .form-group input:focus,
         .form-group select:focus {
             outline: none;
             border-color: var(--secondary-color);
             box-shadow: 0 0 0 3px rgba(160, 222, 214, 0.2);
         }
-        
+
         .search-btn {
             background: var(--primary-color);
             color: var(--white);
@@ -275,79 +280,79 @@
             justify-self: center;
             width: 200px;
         }
-        
+
         .search-btn:hover {
             background: var(--secondary-color);
-            color: var(--primary-color);
+            color: var, --primary-color;
         }
-        
+
         /* Specialties Section */
         .specialties-section {
             padding: 60px 5%;
             background: var(--bg-light);
         }
-        
+
         .section-container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .section-title {
             color: var(--primary-color);
             font-size: 2rem;
             text-align: center;
             margin-bottom: 40px;
         }
-        
+
         .specialties-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 25px;
         }
-        
+
         .specialty-card {
             background: var(--white);
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s;
             cursor: pointer;
             text-align: center;
         }
-        
+
         .specialty-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-        
+
         .specialty-icon {
             background: var(--secondary-color);
             color: var(--primary-color);
             padding: 25px;
             font-size: 2.5rem;
         }
-        
+
         .specialty-info {
             padding: 20px;
         }
-        
+
         .specialty-info h3 {
             color: var(--primary-color);
             margin-bottom: 10px;
         }
-        
+
         .specialty-info p {
             color: var(--text-light);
             font-size: 0.9rem;
             line-height: 1.5;
         }
-        
+
         /* Doctors Section */
         .doctors-section {
             padding: 60px 5%;
             background: var(--white);
         }
-        
+
         .carousel-container {
             position: relative;
             width: 100%;
@@ -356,6 +361,7 @@
             display: flex;
             align-items: center;
         }
+
         .doctors-carousel {
             display: flex;
             gap: 32px;
@@ -364,12 +370,13 @@
             padding: 24px 0;
             width: 100%;
         }
+
         .doctor-card {
             min-width: 260px;
             max-width: 260px;
             background: #fff;
             border-radius: 16px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
             padding: 24px 18px 18px 18px;
             text-align: center;
             flex-shrink: 0;
@@ -377,6 +384,7 @@
             flex-direction: column;
             align-items: center;
         }
+
         .doctor-image img {
             width: 100px;
             height: 100px;
@@ -385,6 +393,7 @@
             margin-bottom: 12px;
             border: 3px solid #A0DED6;
         }
+
         .carousel-btn {
             background: #fff;
             border: 1px solid #A0DED6;
@@ -401,29 +410,42 @@
             position: absolute;
             z-index: 2;
         }
+
         .carousel-btn.left {
             left: -20px;
         }
+
         .carousel-btn.right {
             right: -20px;
         }
+
         .carousel-btn:hover {
             background: #A0DED6;
             color: #fff;
         }
+
         @media (max-width: 700px) {
-            .doctor-card { min-width: 220px; max-width: 220px; }
-            .carousel-btn.left { left: 0; }
-            .carousel-btn.right { right: 0; }
+            .doctor-card {
+                min-width: 220px;
+                max-width: 220px;
+            }
+
+            .carousel-btn.left {
+                left: 0;
+            }
+
+            .carousel-btn.right {
+                right: 0;
+            }
         }
-        
+
         /* Appointment Section */
         .appointment-section {
             padding: 80px 5%;
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
             color: var(--white);
         }
-        
+
         .appointment-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -431,75 +453,81 @@
             align-items: center;
             gap: 50px;
         }
-        
+
         .appointment-content {
             flex: 1;
         }
-        
+
         .appointment-title {
             font-size: 2.2rem;
             margin-bottom: 20px;
             line-height: 1.3;
         }
-        
+
         .appointment-text {
             opacity: 0.9;
             line-height: 1.6;
             margin-bottom: 30px;
         }
-        
+
         .appointment-image {
             flex: 1;
             display: flex;
             justify-content: center;
         }
-        
+
         .appointment-image img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         }
-        
+
         /* Stats Section */
         .stats-section {
             padding: 60px 5%;
             background: var(--bg-light);
         }
-        
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             text-align: center;
         }
-        
+
         .stat-item {
             background: var(--white);
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
-        
+
         .stat-number {
             font-size: 3rem;
             font-weight: 700;
             color: var(--primary-color);
             margin-bottom: 10px;
         }
-        
+
         .stat-label {
             color: var(--text-light);
             font-weight: 600;
         }
-        
+
         /* Footer */
         .footer {
+            position: static;
+            top: auto;
+            left: auto;
+            width: 100%;
+            z-index: 1;
             background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
             color: var(--text-dark);
             padding: 60px 5% 30px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
         }
-        
+
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -507,7 +535,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
         }
-        
+
         .footer-logo {
             font-size: 1.8rem;
             font-weight: 700;
@@ -515,26 +543,26 @@
             display: flex;
             align-items: center;
         }
-        
+
         .footer-logo span {
             color: var(--primary-color);
         }
-        
+
         .footer-about {
             line-height: 1.6;
             margin-bottom: 20px;
             opacity: 0.9;
         }
-        
+
         .social-links {
             display: flex;
             gap: 15px;
             margin-top: 25px;
         }
-        
+
         .social-link {
             color: var(--text-dark);
-            background: rgba(0,0,0,0.05);
+            background: rgba(0, 0, 0, 0.05);
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -543,11 +571,11 @@
             justify-content: center;
             transition: all 0.3s;
         }
-        
+
         .social-link:hover {
-            background: rgba(0,0,0,0.1);
+            background: rgba(0, 0, 0, 0.1);
         }
-        
+
         .footer-title {
             font-size: 1.2rem;
             font-weight: 600;
@@ -556,7 +584,7 @@
             padding-bottom: 10px;
             color: var(--primary-color);
         }
-        
+
         .footer-title::after {
             content: '';
             position: absolute;
@@ -566,86 +594,86 @@
             height: 2px;
             background: var(--primary-color);
         }
-        
+
         .footer-links {
             list-style: none;
             display: grid;
             gap: 12px;
         }
-        
+
         .footer-links a {
             color: var(--text-dark);
             text-decoration: none;
             opacity: 0.9;
             transition: all 0.3s;
         }
-        
+
         .footer-links a:hover {
             opacity: 1;
             padding-left: 5px;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: flex-start;
             gap: 10px;
             margin-bottom: 15px;
         }
-        
+
         .contact-icon {
             color: var(--primary-color);
         }
-        
+
         .newsletter-input {
             display: flex;
             background: var(--white);
             border-radius: 30px;
             overflow: hidden;
         }
-        
+
         .newsletter-input input {
             flex: 1;
             border: none;
             padding: 12px 15px;
             outline: none;
         }
-        
+
         .newsletter-btn {
             background: var(--primary-color);
-            color: var(--white);
+            color: var, --white;
             border: none;
             padding: 0 20px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
         }
-        
+
         .newsletter-btn:hover {
             background: var(--accent-color);
         }
-        
+
         .footer-bottom {
             max-width: 1200px;
             margin: 50px auto 0;
             padding-top: 20px;
-            border-top: 1px solid rgba(0,0,0,0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
         }
-        
+
         .copyright {
             opacity: 0.8;
             font-size: 0.9rem;
         }
-        
+
         .footer-bottom-links {
             display: flex;
             gap: 20px;
         }
-        
+
         .footer-bottom-links a {
             color: var(--text-dark);
             text-decoration: none;
@@ -653,34 +681,36 @@
             font-size: 0.9rem;
             transition: all 0.3s;
         }
-        
+
         .footer-bottom-links a:hover {
             opacity: 1;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
-            .hero-container, 
+
+            .hero-container,
             .appointment-container {
                 flex-direction: column;
                 text-align: center;
             }
-            
+
             .hero-buttons,
             .hero-image {
                 justify-content: center;
             }
-            
+
             .hero-title {
                 font-size: 2.2rem;
             }
-            
+
             .section-title {
                 font-size: 1.8rem;
             }
-            
+
             .nav-links {
-                display: none; /* Mobile menu would be implemented aqui */
+                display: none;
+                /* Mobile menu would be implemented aqui */
             }
         }
 
@@ -690,25 +720,29 @@
             gap: 32px;
             margin: 40px 0;
         }
+
         .specialty-card {
             background: #fff;
             border-radius: 14px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
             padding: 32px 18px 18px 18px;
             text-align: center;
             position: relative;
             cursor: pointer;
             transition: box-shadow 0.3s, transform 0.3s;
         }
+
         .specialty-card:hover {
-            box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
             transform: translateY(-6px) scale(1.04);
         }
+
         .specialty-icon {
             font-size: 2.2rem;
             color: #1a5a4d;
             margin-bottom: 10px;
         }
+
         .specialty-info {
             display: none;
             position: absolute;
@@ -720,19 +754,28 @@
             border-radius: 10px;
             padding: 18px 20px;
             width: 220px;
-            box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
             font-size: 1rem;
             z-index: 10;
             margin-top: 12px;
             text-align: left;
             animation: fadeInUp 0.3s;
         }
+
         .specialty-card:hover .specialty-info {
             display: block;
         }
+
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .user-icon {
@@ -742,24 +785,322 @@
             cursor: pointer;
             transition: color 0.2s;
         }
+
         .user-icon:hover i {
             color: #A0DED6;
         }
+
+        .enhanced-carousel {
+            background: linear-gradient(90deg, #e8f7f4 0%, #f8f9fa 100%);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+            padding: 32px 0 32px 0;
+            margin-bottom: 60px;
+        }
+
+        .enhanced-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.10);
+            padding: 28px 18px 18px 18px;
+            min-width: 270px;
+            max-width: 270px;
+            margin-bottom: 0;
+            transition: box-shadow 0.3s, transform 0.3s;
+            border: 2px solid #A0DED6;
+            position: relative;
+        }
+
+        .enhanced-card:hover {
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.13);
+            transform: translateY(-8px) scale(1.04);
+            border-color: #1a5a4d;
+        }
+
+        .enhanced-card .doctor-image img {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 16px;
+            border: 4px solid #A0DED6;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .enhanced-card .doctor-name {
+            color: #1a5a4d;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .enhanced-card .doctor-specialty {
+            color: #25d366;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .enhanced-card .doctor-rating {
+            color: #FFD700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .enhanced-card .doctor-btn {
+            background: #1a5a4d;
+            color: #fff;
+            border: none;
+            border-radius: 22px;
+            padding: 10px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .enhanced-card .doctor-btn:hover {
+            background: #A0DED6;
+            color: #1a5a4d;
+        }
+
+        @media (max-width: 700px) {
+            .enhanced-card {
+                min-width: 200px;
+                max-width: 200px;
+            }
+        }
+
+        /* Adiciona funcionalidades extras na tela do cliente */
+        .my-appointments-section {
+            padding: 60px 5%;
+            background: #f8f9fa;
+        }
+
+        .appointments-list {
+            display: grid;
+            gap: 28px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .appointment-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            padding: 24px 18px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .appointment-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #A0DED6;
+        }
+
+        .appointment-card div {
+            flex: 1;
+        }
+
+        .appointment-card .doctor-name {
+            font-weight: 700;
+            color: #1a5a4d;
+        }
+
+        .appointment-card .doctor-specialty {
+            color: #25d366;
+            font-weight: 600;
+            font-size: 0.98rem;
+        }
+
+        .appointment-card .appointment-date {
+            color: #888;
+            font-size: 0.98rem;
+        }
+
+        .appointment-card .appointment-type {
+            margin-top: 6px;
+            font-size: 0.98rem;
+        }
+
+        .notifications-section {
+            padding: 60px 5%;
+            background: #fff;
+        }
+
+        .notifications-section ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 18px;
+        }
+
+        .notifications-section li {
+            background: #e8f7f4;
+            padding: 18px 22px;
+            border-radius: 10px;
+            color: #1a5a4d;
+            font-weight: 600;
+        }
+
+        .faq-section {
+            padding: 60px 5%;
+            background: #f8f9fa;
+        }
+
+        .faq-section details {
+            background: #fff;
+            padding: 18px 22px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .faq-section summary {
+            font-weight: 700;
+            color: #1a5a4d;
+            cursor: pointer;
+        }
+
+        .faq-section div {
+            margin-top: 10px;
+            color: #444;
+        }
+
+        .history-section {
+            padding: 60px 5%;
+            background: #fff;
+        }
+
+        .history-list {
+            display: grid;
+            gap: 24px;
+        }
+
+        .history-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            padding: 22px 18px;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .history-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #A0DED6;
+        }
+
+        .history-card div {
+            flex: 1;
+        }
+
+        .history-card .doctor-name {
+            font-weight: 700;
+            color: #1a5a4d;
+        }
+
+        .history-card .doctor-specialty {
+            color: #25d366;
+            font-weight: 600;
+            font-size: 0.98rem;
+        }
+
+        .history-card .appointment-date {
+            color: #888;
+            font-size: 0.98rem;
+        }
+
+        .history-card .appointment-type {
+            margin-top: 6px;
+            font-size: 0.98rem;
+        }
+
+        .nav-links .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 36px;
+            background: #fff;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+            border-radius: 14px;
+            min-width: 210px;
+            z-index: 1002;
+            padding: 10px 0;
+            animation: fadeInUp 0.25s;
+        }
+
+        .nav-links .dropdown-menu li {
+            list-style: none;
+        }
+
+        .nav-links .dropdown-menu a {
+            display: block;
+            padding: 12px 24px;
+            color: #1a5a4d;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 8px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .nav-links .dropdown-menu a:hover {
+            background: #A0DED6;
+            color: #fff;
+        }
+
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header fixed-header">
-        <div class="header-container" style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px;width:100vw;">
-            <a href="tela_cliente.htm" class="logo" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+        <div class="header-container"
+            style="display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 24px;width:100vw;">
+            <a href="tela_cliente.htm" class="logo"
+                style="display:flex;align-items:center;gap:12px;text-decoration:none;">
                 <img src="svg.svg" alt="VitaMed Logo" style="height:44px;width:auto;">
             </a>
             <nav class="nav-links" style="display:flex;align-items:center;gap:28px;">
                 <a href="tela_cliente.htm">Home</a>
+                <a href="meus_agendamentos.htm">Meus Agendamentos</a>
                 <a href="imc.htm">IMC</a>
                 <a href="catalogo_medicos.htm">Médicos</a>
                 <a href="sobre_nos.htm">Sobre Nós</a>
-                <a href="#" class="user-icon" style="background:none;padding:0;border-radius:50%;"><i class="fas fa-user-circle" style="font-size:2rem;color:#1a5a4d;"></i></a>
+                <div class="dropdown" style="position:relative;">
+                    <button class="dots-btn"
+                        style="background:none;border:none;cursor:pointer;font-size:2rem;color:#1a5a4d;padding:0 8px;"
+                        title="Mais opções">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <ul class="dropdown-menu"
+                        style="display:none;position:absolute;right:0;top:36px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,0.12);border-radius:10px;min-width:180px;z-index:1002;padding:10px 0;">
+                        <li><a href="faq.htm"
+                                style="display:block;padding:10px 18px;color:#1a5a4d;text-decoration:none;">FAQ</a>
+                        </li>
+                        <li><a href="contato.htm"
+                                style="display:block;padding:10px 18px;color:#1a5a4d;text-decoration:none;">Contato</a>
+                        </li>
+                        <li><a href="politica_privacidade.htm"
+                                style="display:block;padding:10px 18px;color:#1a5a4d;text-decoration:none;">Política
+                                de Privacidade</a>
+                        </li>
+                    </ul>
+                </div>
+                <span class="user-icon" style="margin-left:18px;cursor:pointer;" title="Meu Perfil"
+                    onclick="window.location.href='perfil_cliente.htm'">
+                    <i class="fas fa-user-circle" style="font-size:2rem;color:#1a5a4d;"></i>
+                </span>
             </nav>
         </div>
     </header>
@@ -771,11 +1112,14 @@
                 <h1 class="hero-subtitle">VitaMed</h1>
                 <h2 class="hero-title">CUIDADO DE SAÚDE<br>PERSONALIZADO</h2>
                 <p class="hero-description">
-                    Conectamos você aos melhores especialistas em saúde com tecnologia e humanização para seu bem-estar integral.
+                    Conectamos você aos melhores especialistas em saúde com tecnologia e humanização para seu bem-estar
+                    integral.
                 </p>
                 <div class="hero-buttons">
-                    <button class="primary-btn">Comece Agora</button>
-                    <button class="secondary-btn">Mais Informações</button>
+                    <button class="primary-btn" onclick="window.location.href='catalogo_medicos.htm'">Comece
+                        Agora</button>
+                    <button class="secondary-btn" onclick="window.location.href='sobre_nos.htm'">Mais
+                        Informações</button>
                 </div>
             </div>
             <div class="hero-image">
@@ -784,212 +1128,209 @@
         </div>
     </section>
 
-    <!-- Search Section -->
-    <section class="search-section" id="busca">
-        <div class="search-container">
-            <h2 class="search-title">Encontre o especialista ideal</h2>
-            <form class="search-form">
-                <div class="form-group">
-                    <label for="specialty">Especialidade</label>
-                    <select id="specialty">
-                        <option value="">Todas especialidades</option>
-                        <option value="cardiologia">Cardiologia</option>
-                        <option value="dermatologia">Dermatologia</option>
-                        <option value="pediatria">Pediatria</option>
-                        <option value="ortopedia">Ortopedia</option>
-                        <option value="ginecologia">Ginecologia</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="location">Localização</label>
-                    <select id="location">
-                        <option value="">Todas localizações</option>
-                        <option value="sp">São Paulo</option>
-                        <option value="rj">Rio de Janeiro</option>
-                        <option value="mg">Minas Gerais</option>
-                        <option value="pr">Paraná</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="date">Data da Consulta</label>
-                    <input type="date" id="date">
-                </div>
-                
-                <div class="form-group">
-                    <label for="insurance">Plano de Saúde</label>
-                    <select id="insurance">
-                        <option value="">Todos os planos</option>
-                        <option value="unimed">Unimed</option>
-                        <option value="amil">Amil</option>
-                        <option value="sulamerica">SulAmérica</option>
-                        <option value="bradesco">Bradesco Saúde</option>
-                    </select>
-                </div>
-                
-                <button type="submit" class="search-btn">Buscar Médicos</button>
-            </form>
-        </div>
-    </section>
-
+   
     <!-- Specialties Section -->
-    <section class="specialties-section" id="especialidades">
-        <div class="section-container specialties-grid-hover">
-            <div class="specialty-card">
-                <i class="fas fa-heartbeat specialty-icon"></i>
-                <span>Cardiologia</span>
-                <div class="specialty-info">Diagnóstico e tratamento de doenças do coração e sistema circulatório.</div>
+    <section class="specialties-section" id="especialidades" style="background:linear-gradient(90deg,#e8f7f4 0%,#f8f9fa 100%);padding:70px 0 80px 0;">
+        <div class="section-container">
+            <h2 class="section-title" style="color:#1a5a4d;font-size:2.4rem;margin-bottom:36px;text-align:center;letter-spacing:1px;">Especialidades Médicas</h2>
+            <p style="text-align:center;color:#555;font-size:1.18rem;max-width:700px;margin:0 auto 44px auto;">Conheça as principais áreas de atuação dos nossos especialistas. Clique em cada especialidade para saber mais sobre sintomas, tratamentos, exames e dicas de prevenção.</p>
+            <div class="specialties-tabs" style="display:flex;justify-content:center;gap:18px;margin-bottom:36px;flex-wrap:wrap;">
+                <button class="specialty-tab" onclick="showSpecialty('cardiologia')" style="background:#1a5a4d;color:#fff;border:none;padding:14px 34px;border-radius:22px;font-weight:700;font-size:1.08rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:all 0.2s;">Cardiologia</button>
+                <button class="specialty-tab" onclick="showSpecialty('neurologia')" style="background:#1a5a4d;color:#fff;border:none;padding:14px 34px;border-radius:22px;font-weight:700;font-size:1.08rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:all 0.2s;">Neurologia</button>
+                <button class="specialty-tab" onclick="showSpecialty('ortopedia')" style="background:#1a5a4d;color:#fff;border:none;padding:14px 34px;border-radius:22px;font-weight:700;font-size:1.08rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:all 0.2s;">Ortopedia</button>
+                <button class="specialty-tab" onclick="showSpecialty('pediatria')" style="background:#1a5a4d;color:#fff;border:none;padding:14px 34px;border-radius:22px;font-weight:700;font-size:1.08rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:all 0.2s;">Pediatria</button>
+                <button class="specialty-tab" onclick="showSpecialty('ginecologia')" style="background:#1a5a4d;color:#fff;border:none;padding:14px 34px;border-radius:22px;font-weight:700;font-size:1.08rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:all 0.2s;">Ginecologia</button>
+                <button class="specialty-tab" onclick="showSpecialty('dermatologia')" style="background:#1a5a4d;color:#fff;border:none;padding:14px 34px;border-radius:22px;font-weight:700;font-size:1.08rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:all 0.2s;">Dermatologia</button>
             </div>
-            <div class="specialty-card">
-                <i class="fas fa-brain specialty-icon"></i>
-                <span>Neurologia</span>
-                <div class="specialty-info">Cuida do sistema nervoso, cérebro, medula e nervos periféricos.</div>
+            <div class="specialties-content-wrapper" style="display:flex;justify-content:center;align-items:stretch;min-height:340px;">
+            <div id="specialty-content-cardiologia" class="specialty-content" style="display:block;width:100%;max-width:520px;">
+                <div class="specialty-card" style="background:linear-gradient(120deg,#fff 70%,#A0DED6 100%);border-radius:22px;box-shadow:0 4px 24px rgba(0,0,0,0.09);padding:38px 28px 32px 28px;text-align:center;">
+                    <i class="fas fa-heartbeat specialty-icon" style="font-size:3rem;color:#1a5a4d;margin-bottom:16px;"></i>
+                    <span style="display:block;font-weight:700;color:#1a5a4d;font-size:1.35rem;letter-spacing:1px;">Cardiologia</span>
+                    <div style="margin-top:22px;color:#444;font-size:1.13rem;line-height:1.7;">Diagnóstico e tratamento de doenças do coração e sistema circulatório.<br><b>Exemplo:</b> Hipertensão, infarto, arritmias.<br><b>Prevenção:</b> Controle do colesterol, exercícios, alimentação saudável.</div>
+                    <a href="especialidade_cardiologia.htm" class="primary-btn specialty-more-btn" style="margin-top:28px;background:linear-gradient(90deg,#25d366 60%,#1a5a4d 100%);color:#fff;border:none;padding:13px 38px;border-radius:30px;font-weight:700;font-size:1.08rem;box-shadow:0 2px 8px rgba(0,0,0,0.07);letter-spacing:1px;transition:all 0.2s;display:inline-flex;align-items:center;gap:10px;"><i class="fas fa-arrow-right"></i> Saiba Mais</a>
+                </div>
             </div>
-            <div class="specialty-card">
-                <i class="fas fa-bone specialty-icon"></i>
-                <span>Ortopedia</span>
-                <div class="specialty-info">Tratamento de ossos, músculos, articulações e lesões esportivas.</div>
+            <div id="specialty-content-neurologia" class="specialty-content" style="display:none;width:100%;max-width:520px;">
+                <div class="specialty-card" style="background:linear-gradient(120deg,#fff 70%,#A0DED6 100%);border-radius:22px;box-shadow:0 4px 24px rgba(0,0,0,0.09);padding:38px 28px 32px 28px;text-align:center;">
+                    <i class="fas fa-brain specialty-icon" style="font-size:3rem;color:#1a5a4d;margin-bottom:16px;"></i>
+                    <span style="display:block;font-weight:700;color:#1a5a4d;font-size:1.35rem;letter-spacing:1px;">Neurologia</span>
+                    <div style="margin-top:22px;color:#444;font-size:1.13rem;line-height:1.7;">Cuida do sistema nervoso, cérebro, medula e nervos periféricos.<br><b>Exemplo:</b> AVC, epilepsia, enxaqueca.<br><b>Prevenção:</b> Controle da pressão, evitar tabagismo, sono regular.</div>
+                    <a href="especialidade_neurologia.htm" class="primary-btn specialty-more-btn" style="margin-top:28px;background:linear-gradient(90deg,#25d366 60%,#1a5a4d 100%);color:#fff;border:none;padding:13px 38px;border-radius:30px;font-weight:700;font-size:1.08rem;box-shadow:0 2px 8px rgba(0,0,0,0.07);letter-spacing:1px;transition:all 0.2s;display:inline-flex;align-items:center;gap:10px;"><i class="fas fa-arrow-right"></i> Saiba Mais</a>
+                </div>
             </div>
-            <div class="specialty-card">
-                <i class="fas fa-user-nurse specialty-icon"></i>
-                <span>Pediatria</span>
-                <div class="specialty-info">Saúde de bebês, crianças e adolescentes.</div>
+            <div id="specialty-content-ortopedia" class="specialty-content" style="display:none;width:100%;max-width:520px;">
+                <div class="specialty-card" style="background:linear-gradient(120deg,#fff 70%,#A0DED6 100%);border-radius:22px;box-shadow:0 4px 24px rgba(0,0,0,0.09);padding:38px 28px 32px 28px;text-align:center;">
+                    <i class="fas fa-bone specialty-icon" style="font-size:3rem;color:#1a5a4d;margin-bottom:16px;"></i>
+                    <span style="display:block;font-weight:700;color:#1a5a4d;font-size:1.35rem;letter-spacing:1px;">Ortopedia</span>
+                    <div style="margin-top:22px;color:#444;font-size:1.13rem;line-height:1.7;">Tratamento de ossos, músculos, articulações e lesões esportivas.<br><b>Exemplo:</b> Fraturas, artrose, lesões esportivas.<br><b>Dica:</b> Alongamento, postura e fortalecimento muscular.</div>
+                    <a href="especialidade_ortopedia.htm" class="primary-btn specialty-more-btn" style="margin-top:28px;background:linear-gradient(90deg,#25d366 60%,#1a5a4d 100%);color:#fff;border:none;padding:13px 38px;border-radius:30px;font-weight:700;font-size:1.08rem;box-shadow:0 2px 8px rgba(0,0,0,0.07);letter-spacing:1px;transition:all 0.2s;display:inline-flex;align-items:center;gap:10px;"><i class="fas fa-arrow-right"></i> Saiba Mais</a>
+                </div>
             </div>
-            <div class="specialty-card">
-                <i class="fas fa-female specialty-icon"></i>
-                <span>Ginecologia</span>
-                <div class="specialty-info">Saúde da mulher, prevenção e acompanhamento ginecológico.</div>
+            <div id="specialty-content-pediatria" class="specialty-content" style="display:none;width:100%;max-width:520px;">
+                <div class="specialty-card" style="background:linear-gradient(120deg,#fff 70%,#A0DED6 100%);border-radius:22px;box-shadow:0 4px 24px rgba(0,0,0,0.09);padding:38px 28px 32px 28px;text-align:center;">
+                    <i class="fas fa-user-nurse specialty-icon" style="font-size:3rem;color:#1a5a4d;margin-bottom:16px;"></i>
+                    <span style="display:block;font-weight:700;color:#1a5a4d;font-size:1.35rem;letter-spacing:1px;">Pediatria</span>
+                    <div style="margin-top:22px;color:#444;font-size:1.13rem;line-height:1.7;">Saúde de bebês, crianças e adolescentes.<br><b>Exemplo:</b> Vacinação, crescimento, alergias.<br><b>Dica:</b> Acompanhamento regular e alimentação balanceada.</div>
+                    <a href="especialidade_pediatria.htm" class="primary-btn specialty-more-btn" style="margin-top:28px;background:linear-gradient(90deg,#25d366 60%,#1a5a4d 100%);color:#fff;border:none;padding:13px 38px;border-radius:30px;font-weight:700;font-size:1.08rem;box-shadow:0 2px 8px rgba(0,0,0,0.07);letter-spacing:1px;transition:all 0.2s;display:inline-flex;align-items:center;gap:10px;"><i class="fas fa-arrow-right"></i> Saiba Mais</a>
+                </div>
             </div>
-            <div class="specialty-card">
-                <i class="fas fa-allergies specialty-icon"></i>
-                <span>Dermatologia</span>
-                <div class="specialty-info">Tratamento de pele, cabelos, unhas e doenças dermatológicas.</div>
+            <div id="specialty-content-ginecologia" class="specialty-content" style="display:none;width:100%;max-width:520px;">
+                <div class="specialty-card" style="background:linear-gradient(120deg,#fff 70%,#A0DED6 100%);border-radius:22px;box-shadow:0 4px 24px rgba(0,0,0,0.09);padding:38px 28px 32px 28px;text-align:center;">
+                    <i class="fas fa-female specialty-icon" style="font-size:3rem;color:#1a5a4d;margin-bottom:16px;"></i>
+                    <span style="display:block;font-weight:700;color:#1a5a4d;font-size:1.35rem;letter-spacing:1px;">Ginecologia</span>
+                    <div style="margin-top:22px;color:#444;font-size:1.13rem;line-height:1.7;">Saúde da mulher, prevenção e acompanhamento ginecológico.<br><b>Exemplo:</b> Exames preventivos, menopausa, anticoncepção.<br><b>Dica:</b> Realize consultas e exames periódicos.</div>
+                    <a href="especialidade_ginecologia.htm" class="primary-btn specialty-more-btn" style="margin-top:28px;background:linear-gradient(90deg,#25d366 60%,#1a5a4d 100%);color:#fff;border:none;padding:13px 38px;border-radius:30px;font-weight:700;font-size:1.08rem;box-shadow:0 2px 8px rgba(0,0,0,0.07);letter-spacing:1px;transition:all 0.2s;display:inline-flex;align-items:center;gap:10px;"><i class="fas fa-arrow-right"></i> Saiba Mais</a>
+                </div>
+            </div>
+            <div id="specialty-content-dermatologia" class="specialty-content" style="display:none;width:100%;max-width:520px;">
+                <div class="specialty-card" style="background:linear-gradient(120deg,#fff 70%,#A0DED6 100%);border-radius:22px;box-shadow:0 4px 24px rgba(0,0,0,0.09);padding:38px 28px 32px 28px;text-align:center;">
+                    <i class="fas fa-allergies specialty-icon" style="font-size:3rem;color:#1a5a4d;margin-bottom:16px;"></i>
+                    <span style="display:block;font-weight:700;color:#1a5a4d;font-size:1.35rem;letter-spacing:1px;">Dermatologia</span>
+                    <div style="margin-top:22px;color:#444;font-size:1.13rem;line-height:1.7;">Tratamento de pele, cabelos, unhas e doenças dermatológicas.<br><b>Exemplo:</b> Acne, psoríase, queda de cabelo.<br><b>Dica:</b> Use protetor solar diariamente.</div>
+                    <a href="especialidade_dermatologia.htm" class="primary-btn specialty-more-btn" style="margin-top:28px;background:linear-gradient(90deg,#25d366 60%,#1a5a4d 100%);color:#fff;border:none;padding:13px 38px;border-radius:30px;font-weight:700;font-size:1.08rem;box-shadow:0 2px 8px rgba(0,0,0,0.07);letter-spacing:1px;transition:all 0.2s;display:inline-flex;align-items:center;gap:10px;"><i class="fas fa-arrow-right"></i> Saiba Mais</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Doctors Section -->
     <section class="doctors-section" id="medicos">
-        <h2 class="section-title">Médicos</h2>
-        <div class="carousel-container">
+        <h2 class="section-title">Nossos Especialistas</h2>
+        <div class="carousel-container enhanced-carousel">
             <button class="carousel-btn left" onclick="scrollCarousel(-1)"><i class="fas fa-chevron-left"></i></button>
             <div class="doctors-carousel" id="doctorsCarousel">
                 <!-- Card 1 -->
-                <div class="doctor-card">
+                <div class="doctor-card enhanced-card">
                     <div class="doctor-image">
-                        <img src="https://img.freepik.com/fotos-premium/joven-medico-africano-blanco-aislado-fonendoscopio_105818-414.jpg" alt="Dr. Carlos Eduardo">
+                        <img src="https://img.freepik.com/fotos-premium/joven-medico-africano-blanco-aislado-fonendoscopio_105818-414.jpg"
+                            alt="Dr. Carlos Eduardo">
                     </div>
                     <div class="doctor-info">
                         <h3 class="doctor-name">Dr. Carlos Eduardo</h3>
                         <span class="doctor-specialty">Cardiologista</span>
                         <div class="doctor-rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span>(128 avaliações)</span>
                         </div>
                         <a href="dr_carlos.htm" class="doctor-btn">Ver Perfil</a>
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="doctor-card">
+                <div class="doctor-card enhanced-card">
                     <div class="doctor-image">
-                        <img src="https://img.freepik.com/fotos-premium/pronto-para-assumir-outro-dia-foto-de-uma-jovem-medica-no-trabalho_590464-62611.jpg" alt="Dra. Ana Clara">
+                        <img src="https://img.freepik.com/fotos-premium/pronto-para-assumir-outro-dia-foto-de-uma-jovem-medica-no-trabalho_590464-62611.jpg"
+                            alt="Dra. Ana Clara">
                     </div>
                     <div class="doctor-info">
                         <h3 class="doctor-name">Dra. Ana Clara</h3>
                         <span class="doctor-specialty">Dermatologista</span>
                         <div class="doctor-rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(245 avaliações)</span>
                         </div>
                         <a href="dr_ana_clara.htm" class="doctor-btn">Ver Perfil</a>
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="doctor-card">
+                <div class="doctor-card enhanced-card">
                     <div class="doctor-image">
-                        <img src="https://img.freepik.com/fotos-premium/retrato-da-bela-jovem-medica-na-jaqueta-medica-branca-isolada-no-fundo-branco-medica-morena-cruzou-as-maos-e-sorrindo-para-a-camera_533057-127.jpg" alt="Dra. Juliana Santos">
+                        <img src="https://img.freepik.com/fotos-premium/retrato-da-bela-jovem-medica-na-jaqueta-medica-branca-isolada-no-fundo-branco-medica-morena-cruzou-as-maos-e-sorrindo-para-a-camera_533057-127.jpg"
+                            alt="Dra. Juliana Santos">
                     </div>
                     <div class="doctor-info">
                         <h3 class="doctor-name">Dra. Juliana Santos</h3>
                         <span class="doctor-specialty">Pediatra</span>
                         <div class="doctor-rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(312 avaliações)</span>
                         </div>
                         <a href="dra_juliana_santos.htm" class="doctor-btn">Ver Perfil</a>
                     </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="doctor-card">
+                <div class="doctor-card enhanced-card">
                     <div class="doctor-image">
-                        <img src="https://img.freepik.com/fotos-gratis/medico-com-os-bracos-cruzados-sobre-fundo-branco_1368-5790.jpg?semt=ais_hybrid&w=740" alt="Dr. Roberto Almeida">
+                        <img src="https://img.freepik.com/fotos-gratis/medico-com-os-bracos-cruzados-sobre-fundo-branco_1368-5790.jpg?semt=ais_hybrid&w=740"
+                            alt="Dr. Roberto Almeida">
                     </div>
                     <div class="doctor-info">
                         <h3 class="doctor-name">Dr. Roberto Almeida</h3>
                         <span class="doctor-specialty">Ortopedista</span>
                         <div class="doctor-rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="far fa-star"></i>
                             <span>(87 avaliações)</span>
                         </div>
                         <a href="dr_roberto_almeida.htm" class="doctor-btn">Ver Perfil</a>
                     </div>
                 </div>
                 <!-- Card 5 -->
-                <div class="doctor-card">
+                <div class="doctor-card enhanced-card">
                     <div class="doctor-image">
-                        <img src="https://img.freepik.com/fotos-premium/conceito-de-medicina-saude-profissao-e-pessoas-retrato-de-uma-medica-branca-europeia-cruzando-os-bracos-em-uma-bata-medica-usando-um-estetoscopio-do-lado-de-fora-em-um-tempo-ensolarado-olhando-para-longe_271445-82.jpg" alt="Dra. Camila Ribeiro">
+                        <img src="https://img.freepik.com/fotos-premium/conceito-de-medicina-saude-profissao-e-pessoas-retrato-de-uma-medica-branca-europeia-cruzando-os-bracos-em-uma-bata-medica-usando-um-estetoscopio-do-lado-de-fora-em-um-tempo-ensolarado-olhando-para-longe_271445-82.jpg"
+                            alt="Dra. Camila Ribeiro">
                     </div>
                     <div class="doctor-info">
                         <h3 class="doctor-name">Dra. Camila Ribeiro</h3>
                         <span class="doctor-specialty">Ginecologista</span>
                         <div class="doctor-rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(210 avaliações)</span>
                         </div>
                         <a href="dra_camila_ribeiro.htm" class="doctor-btn">Ver Perfil</a>
                     </div>
                 </div>
                 <!-- Card 6 -->
-                <div class="doctor-card">
+                <div class="doctor-card enhanced-card">
                     <div class="doctor-image">
-                        <img src="https://img.freepik.com/fotos-premium/medico-brasileiro-sobre-fundo-branco-isolado-apresentando-uma-ideia-enquanto-olha-sorrindo-para_1368-458039.jpg" alt="Dr. André Lima">
+                        <img src="https://img.freepik.com/fotos-premium/medico-brasileiro-sobre-fundo-branco-isolado-apresentando-uma-ideia-enquanto-olha-sorrindo-para_1368-458039.jpg"
+                            alt="Dr. André Lima">
                     </div>
                     <div class="doctor-info">
                         <h3 class="doctor-name">Dr. André Lima</h3>
                         <span class="doctor-specialty">Endocrinologista</span>
                         <div class="doctor-rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="far fa-star"></i>
                             <span>(77 avaliações)</span>
                         </div>
                         <a href="dr_andre_lima.htm" class="doctor-btn">Ver Perfil</a>
                     </div>
                 </div>
                 <!-- Card 7 -->
-                <div class="doctor-card">
+                <div class="doctor-card enhanced-card">
                     <div class="doctor-image">
-                        <img src="https://st2.depositphotos.com/3889193/8015/i/450/depositphotos_80150956-stock-photo-confiante-mulher-medico-com-roupa-branca-e-estetoscopio-sorrindo-e-olhando-para-a-camera.jpg" alt="Dra. Patrícia Torres">
+                        <img src="https://st2.depositphotos.com/3889193/8015/i/450/depositphotos_80150956-stock-photo-confiante-mulher-medico-com-roupa-branca-e-estetoscopio-sorrindo-e-olhando-para-a-camera.jpg"
+                            alt="Dra. Patrícia Torres">
                     </div>
                     <div class="doctor-info">
                         <h3 class="doctor-name">Dra. Patrícia Torres</h3>
                         <span class="doctor-specialty">Psiquiatra</span>
                         <div class="doctor-rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span>(98 avaliações)</span>
                         </div>
                         <a href="dra_patricia_torres.htm" class="doctor-btn">Ver Perfil</a>
                     </div>
                 </div>
                 <!-- Card 8 -->
-                <div class="doctor-card">
+                <div class="doctor-card enhanced-card">
                     <div class="doctor-image">
-                        <img src="https://st3.depositphotos.com/12982378/33785/i/450/depositphotos_337857420-stock-photo-smiling-doctor-stethoscope-looking-camera.jpg" alt="Dr. Gustavo Lima">
+                        <img src="https://st3.depositphotos.com/12982378/33785/i/450/depositphotos_337857420-stock-photo-smiling-doctor-stethoscope-looking-camera.jpg"
+                            alt="Dr. Gustavo Lima">
                     </div>
                     <div class="doctor-info">
                         <h3 class="doctor-name">Dr. Gustavo Lima</h3>
                         <span class="doctor-specialty">Clínico Geral</span>
                         <div class="doctor-rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span>(134 avaliações)</span>
                         </div>
                         <a href="dr_gustavo_lima.htm" class="doctor-btn">Ver Perfil</a>
@@ -1006,8 +1347,8 @@
             <div class="appointment-content">
                 <h2 class="appointment-title">Agende sua consulta de forma rápida e segura</h2>
                 <p class="appointment-text">
-                    Na VitaMed, você agenda consultas com os melhores especialistas em poucos cliques. 
-                    Tenha acesso a profissionais renomados, avaliações de pacientes e todo o conforto 
+                    Na VitaMed, você agenda consultas com os melhores especialistas em poucos cliques.
+                    Tenha acesso a profissionais renomados, avaliações de pacientes e todo o conforto
                     que sua saúde merece.
                 </p>
                 <button class="primary-btn">Agendar Consulta Online</button>
@@ -1026,17 +1367,17 @@
                     <div class="stat-number">+50</div>
                     <div class="stat-label">Médicos Especialistas</div>
                 </div>
-                
+
                 <div class="stat-item">
                     <div class="stat-number">+5.000</div>
                     <div class="stat-label">Pacientes Atendidos</div>
                 </div>
-                
+
                 <div class="stat-item">
                     <div class="stat-number">+10</div>
                     <div class="stat-label">Especialidades Médicas</div>
                 </div>
-                
+
                 <div class="stat-item">
                     <div class="stat-number">98%</div>
                     <div class="stat-label">Satisfação dos Pacientes</div>
@@ -1045,11 +1386,80 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Adiciona funcionalidades extras na tela do cliente -->
+    <section class="my-appointments-section" id="meus-agendamentos" style="padding:60px 5%;background:#f8f9fa;">
+        <div class="section-container">
+            <h2 class="section-title">Meus Agendamentos Recentes</h2>
+            <div class="appointments-list" style="display:grid;gap:28px;max-width:900px;margin:0 auto;">
+                <!-- Consulta Pendente -->
+                <div class="appointment-card" style="background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:24px 18px;display:flex;align-items:center;gap:24px;cursor:pointer;" onclick="window.location.href='dr_ana_clara.htm'">
+                    <img src="https://img.freepik.com/fotos-premium/pronto-para-assumir-outro-dia-foto-de-uma-jovem-medica-no-trabalho_590464-62611.jpg" alt="Dra. Ana Clara" style="width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid #A0DED6;">
+                    <div style="flex:1;">
+                        <div style="font-weight:700;color:#1a5a4d;">Dra. Ana Clara <span style="color:#25d366;font-weight:600;font-size:0.98rem;">(Dermatologista)</span></div>
+                        <div style="color:#888;font-size:0.98rem;">20/06/2024 às 14:00</div>
+                        <div style="margin-top:6px;font-size:0.98rem;"><b>Atendimento:</b> Online</div>
+                        <div style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;">
+                            <a href="comprovante_pagamento_ana_clara.pdf" download class="primary-btn" style="padding:7px 18px;font-size:0.98rem;background:#25d366;"><i class="fas fa-file-download"></i> Comprovante de Pagamento</a>
+                            <button class="primary-btn" style="padding:7px 18px;font-size:0.98rem;" onclick="event.stopPropagation();window.location.href='consulta_online.htm';"><i class="fas fa-video"></i> Entrar na Consulta Online</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Consulta Finalizada -->
+                <div class="appointment-card" style="background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:24px 18px;display:flex;align-items:center;gap:24px;cursor:pointer;" onclick="window.location.href='dr_carlos.htm'">
+                    <img src="https://img.freepik.com/fotos-premium/joven-medico-africano-blanco-aislado-fonendoscopio_105818-414.jpg" alt="Dr. Carlos Eduardo" style="width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid #A0DED6;">
+                    <div style="flex:1;">
+                        <div style="font-weight:700;color:#1a5a4d;">Dr. Carlos Eduardo <span style="color:#25d366;font-weight:600;font-size:0.98rem;">(Cardiologista)</span></div>
+                        <div style="color:#888;font-size:0.98rem;">22/06/2024 às 09:30</div>
+                        <div style="margin-top:6px;font-size:0.98rem;"><b>Atendimento:</b> Presencial</div>
+                        <div style="margin-top:6px;font-size:0.98rem;"><b>Local:</b> Clínica VitaMed, Av. Brasil, 1234 - Rio de Janeiro, RJ</div>
+                        <iframe style="width:100%;height:120px;border-radius:10px;border:1px solid #A0DED6;margin-top:10px;" src="https://www.google.com/maps?q=Av.+Brasil,+1234+-+Rio+de+Janeiro,+RJ&output=embed"></iframe>
+                        <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap;">
+                            <a href="comprovante_pagamento_carlos.pdf" download class="primary-btn" style="padding:7px 18px;font-size:0.98rem;background:#25d366;"><i class="fas fa-file-download"></i> Comprovante de Pagamento</a>
+                            <a href="atestado_carlos.pdf" download class="primary-btn" style="padding:7px 18px;font-size:0.98rem;background:#1a5a4d;"><i class="fas fa-file-medical"></i> Baixar Atestado</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top:40px;text-align:center;">
+                <button class="secondary-btn" onclick="document.getElementById('history-section').scrollIntoView({behavior:'smooth'});">Ver Histórico de Consultas</button>
+            </div>
+        </div>
+    </section>
+    <section class="history-section" id="history-section" style="padding:60px 5%;background:#fff;">
+        <div class="section-container" style="max-width:900px;margin:0 auto;">
+            <h2 class="section-title">Histórico de Consultas</h2>
+            <div class="history-list">
+                <div class="history-card">
+                    <img src="https://img.freepik.com/fotos-premium/joven-medico-africano-blanco-aislado-fonendoscopio_105818-414.jpg" alt="Dr. Carlos Eduardo">
+                    <div>
+                        <div class="doctor-name">Dr. Carlos Eduardo</div>
+                        <div class="doctor-specialty">Cardiologista</div>
+                        <div class="appointment-date">22/06/2024</div>
+                        <div class="appointment-type">Presencial</div>
+                    </div>
+                </div>
+                <div class="history-card">
+                    <img src="https://img.freepik.com/fotos-premium/pronto-para-assumir-outro-dia-foto-de-uma-jovem-medica-no-trabalho_590464-62611.jpg" alt="Dra. Ana Clara">
+                    <div>
+                        <div class="doctor-name">Dra. Ana Clara</div>
+                        <div class="doctor-specialty">Dermatologista</div>
+                        <div class="appointment-date">20/06/2024</div>
+                        <div class="appointment-type">Online</div>
+                    </div>
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-col">
-                <div class="footer-logo"><span>Vita</span>Med</div>
+                <a href="tela_cliente.htm" class="footer-logo"
+                    style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+                    <img src="svg.svg" alt="VitaMed Logo" style="height:36px;">
+                    <span style="color:#1a5a4d;font-weight:700;font-size:1.3rem;">Vita</span><span
+                        style="color:#25d366;font-weight:700;font-size:1.3rem;">Med</span>
+                </a>
                 <p class="footer-about">
                     Conectando você aos melhores especialistas em saúde, com cuidado e excelência.
                 </p>
@@ -1059,7 +1469,6 @@
                     <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            
             <div class="footer-col">
                 <h3 class="footer-title">Links Rápidos</h3>
                 <ul class="footer-links">
@@ -1070,7 +1479,6 @@
                     <li><a href="#blog">Blog de Saúde</a></li>
                 </ul>
             </div>
-            
             <div class="footer-col">
                 <h3 class="footer-title">Especialidades</h3>
                 <ul class="footer-links">
@@ -1081,7 +1489,6 @@
                     <li><a href="#">Ginecologia</a></li>
                 </ul>
             </div>
-            
             <div class="footer-col">
                 <h3 class="footer-title">Contato</h3>
                 <div class="contact-item">
@@ -1096,20 +1503,20 @@
                     <i class="fas fa-phone-alt contact-icon"></i>
                     <span>(11) 98765-4321</span>
                 </div>
-                
                 <h4 class="footer-title" style="margin-top: 20px;">Newsletter</h4>
-                <div class="newsletter-input">
-                    <input type="email" placeholder="Seu e-mail">
-                    <button class="newsletter-btn"><i class="fas fa-paper-plane"></i></button>
-                </div>
+                <form class="newsletter-input"
+                    onsubmit="event.preventDefault();alert('Inscrição realizada com sucesso!');">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button class="newsletter-btn" type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
         </div>
-        
-        <div class="footer-bottom">
-            <div class="copyright">
+        <div class="footer-bottom"
+            style="max-width:1200px;margin:50px auto 0;padding-top:20px;border-top:1px solid rgba(0,0,0,0.1);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;">
+            <div class="copyright" style="opacity:0.8;font-size:0.9rem;">
                 © 2023 VitaMed. Todos os direitos reservados.
             </div>
-            <div class="footer-bottom-links">
+            <div class="footer-bottom-links" style="display:flex;gap:20px;">
                 <a href="#">Termos de Uso</a>
                 <a href="#">Política de Privacidade</a>
             </div>
@@ -1118,43 +1525,53 @@
 
     <script>
         // Simulação de busca de médicos
-        document.querySelector('.search-form').addEventListener('submit', function(e) {
+        document.querySelector('.search-form').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const specialty = document.getElementById('specialty').value;
             const location = document.getElementById('location').value;
             const date = document.getElementById('date').value;
             const insurance = document.getElementById('insurance').value;
-            
+
             // Em uma aplicação real, aqui seria feita uma requisição AJAX
             alert(`Buscando médicos com os filtros:\nEspecialidade: ${specialty || 'Todas'}\nLocalização: ${location || 'Todas'}\nData: ${date || 'Qualquer'}\nPlano: ${insurance || 'Todos'}`);
-            
+
             // Scroll para a seção de médicos
             document.getElementById('medicos').scrollIntoView({ behavior: 'smooth' });
         });
-        
+
         // Simulação de agendamento
         const doctorButtons = document.querySelectorAll('.doctor-btn');
         doctorButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
+            button.addEventListener('click', function (e) {
                 const doctorName = this.closest('.doctor-card').querySelector('.doctor-name').textContent;
+                if (doctorName === 'Dra. Ana Clara') {
+                    window.location.href = 'dr_ana_clara.htm';
+                    return;
+                }
+                if (doctorName === 'Dr. Carlos Eduardo') {
+                    window.location.href = 'dr_carlos.htm';
+                    return;
+                }
+                // Para os demais, mantém o alerta
+                e.preventDefault();
                 alert(`Você será redirecionado para agendar uma consulta com ${doctorName}`);
             });
         });
-        
+
         // Botão de agendamento principal
+
         const agendarBtn = document.querySelector('.appointment-section .primary-btn');
         if (agendarBtn) {
-            agendarBtn.addEventListener('click', function() {
+            agendarBtn.addEventListener('click', function () {
                 window.location.href = 'catalogo_medicos.htm';
             });
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const userIcon = document.querySelector('.user-icon');
             if (userIcon) {
-                userIcon.addEventListener('click', function() {
+                userIcon.addEventListener('click', function () {
                     window.location.href = 'perfil_cliente.htm';
                 });
             }
@@ -1165,6 +1582,127 @@
             const cardWidth = carousel.querySelector('.doctor-card').offsetWidth + 32;
             carousel.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
         }
+
+        // Dropdown 3 pontos
+        const dotsBtn = document.querySelector('.dots-btn');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        dotsBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+        document.addEventListener('click', function () {
+            dropdownMenu.style.display = 'none';
+        });
+
+        // FAQ adicionar pergunta
+        const addFaqBtn = document.getElementById('add-faq-btn');
+        const faqForm = document.getElementById('faq-form');
+        const faqList = document.getElementById('faq-list');
+        addFaqBtn.addEventListener('click', function() {
+            faqForm.style.display = faqForm.style.display === 'flex' ? 'none' : 'flex';
+        });
+        faqForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const question = document.getElementById('faq-question').value.trim();
+            if (question) {
+                const details = document.createElement('details');
+                details.style.background = '#fff';
+                details.style.padding = '18px 22px';
+                details.style.borderRadius = '10px';
+                details.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)';
+                details.innerHTML = `<summary style='font-weight:700;color:#1a5a4d;cursor:pointer;'>${question}</summary>`;
+                faqList.appendChild(details);
+                faqForm.reset();
+                faqForm.style.display = 'none';
+            }
+        });
+
+        const doctorsData = [
+            {
+                nome: 'Dr. Carlos Eduardo',
+                especialidade: 'cardiologia',
+                local: 'rj',
+                plano: ['unimed', 'amil'],
+                img: 'https://img.freepik.com/fotos-premium/joven-medico-africano-blanco-aislado-fonendoscopio_105818-414.jpg',
+                perfil: 'dr_carlos.htm',
+                avaliacao: 4.5
+            },
+            {
+                nome: 'Dra. Ana Clara',
+                especialidade: 'dermatologia',
+                local: 'sp',
+                plano: ['unimed', 'sulamerica'],
+                img: 'https://img.freepik.com/fotos-premium/pronto-para-assumir-outro-dia-foto-de-uma-jovem-medica-no-trabalho_590464-62611.jpg',
+                perfil: 'dr_ana_clara.htm',
+                avaliacao: 5
+            },
+            {
+                nome: 'Dra. Juliana Santos',
+                especialidade: 'pediatria',
+                local: 'mg',
+                plano: ['bradesco', 'amil'],
+                img: 'https://img.freepik.com/fotos-premium/retrato-da-bela-jovem-medica-na-jaqueta-medica-branca-isolada-no-fundo-branco-medica-morena-cruzou-as-maos-e-sorrindo-para-a-camera_533057-127.jpg',
+                perfil: 'dra_juliana_santos.htm',
+                avaliacao: 5
+            },
+            {
+                nome: 'Dr. Roberto Almeida',
+                especialidade: 'ortopedia',
+                local: 'sp',
+                plano: ['unimed', 'bradesco'],
+                img: 'https://img.freepik.com/fotos-gratis/medico-com-os-bracos-cruzados-sobre-fundo-branco_1368-5790.jpg?semt=ais_hybrid&w=740',
+                perfil: 'dr_roberto_almeida.htm',
+                avaliacao: 4
+            },
+            {
+                nome: 'Dra. Camila Ribeiro',
+                especialidade: 'ginecologia',
+                local: 'rj',
+                plano: ['amil', 'sulamerica'],
+                img: 'https://img.freepik.com/fotos-premium/conceito-de-medicina-saude-profissao-e-pessoas-retrato-de-uma-medica-branca-europeia-cruzando-os-bracos-em-uma-bata-medica-usando-um-estetoscopio-do-lado-de-fora-em-um-tempo-ensolarado-olhando-para-longe_271445-82.jpg',
+                perfil: 'dra_camila_ribeiro.htm',
+                avaliacao: 5
+            }
+        ];
+
+        document.getElementById('specialist-search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const specialty = document.getElementById('specialty').value;
+            const location = document.getElementById('location').value;
+            const insurance = document.getElementById('insurance').value;
+            const resultsDiv = document.getElementById('search-results');
+            let results = doctorsData.filter(doc => {
+                return (!specialty || doc.especialidade === specialty)
+                    && (!location || doc.local === location)
+                    && (!insurance || doc.plano.includes(insurance));
+            });
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<div style="color:#c00;font-weight:600;text-align:center;">Nenhum médico encontrado com os filtros selecionados.</div>';
+                return;
+            }
+            resultsDiv.innerHTML = results.map(doc => `
+                <div style="background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,0.07);padding:24px 18px;margin-bottom:18px;display:flex;align-items:center;gap:24px;">
+                    <img src="${doc.img}" alt="${doc.nome}" style="width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid #A0DED6;">
+                    <div style="flex:1;">
+                        <div style="font-weight:700;color:#1a5a4d;">${doc.nome}</div>
+                        <div style="color:#25d366;font-weight:600;font-size:0.98rem;">${doc.especialidade.charAt(0).toUpperCase() + doc.especialidade.slice(1)}</div>
+                        <div style="color:#888;font-size:0.98rem;">Local: ${doc.local.toUpperCase()}</div>
+                        <div style="color:#FFD700;font-size:1.1rem;">${'★'.repeat(Math.floor(doc.avaliacao))}${doc.avaliacao % 1 ? '½' : ''}</div>
+                    </div>
+                    <a href="${doc.perfil}" class="primary-btn" style="padding:7px 18px;font-size:0.98rem;">Ver Perfil</a>
+                </div>
+            `).join('');
+        });
+
+        function showSpecialty(specialty) {
+            const specialties = ['cardiologia','neurologia','ortopedia','pediatria','ginecologia','dermatologia'];
+            specialties.forEach(function(name) {
+                document.getElementById('specialty-content-' + name).style.display = (name === specialty) ? 'block' : 'none';
+            });
+            // Scroll para o conteúdo
+            document.getElementById('specialty-content-' + specialty).scrollIntoView({behavior:'smooth',block:'center'});
+        }
     </script>
 </body>
+
 </html>
