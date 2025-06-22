@@ -3,259 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitmed Plataforma</title>
+    <title>Vitamed Plataforma</title>
     <link rel="stylesheet" href="custom.css">
-    
-        
 </head>
 <body>
-   <script src="java.js"></script>
-    
-<div class="main-container">
-    <header class="header" style="background: white; box-shadow: 0 2px 15px rgba(0,0,0,0.1); padding: 15px 5%; position: sticky; top: 0; z-index: 1000;">
+    <header class="header">
         <div class="logo" style="display: flex; align-items: center; gap: 10px;">
             <img src="svg.svg" alt="VitaMed Logo" style="height: 40px; width: 200px;">
-            <span class="logo-text" style="font-size: 1.5rem; font-weight: 700; color: #1a5a4d; font-family: 'Arial', sans-serif;">
+            <span class="logo-text" style="font-size: 1.5rem; font-weight: 700; color: #1a5a4d;">VitaMed</span>
         </div>
-        <nav class="nav-links" style="display: flex; align-items: center; gap: 30px;">
-            <a href="vitamed-landingpage.htm" style="text-decoration: none; color: #333; font-weight: 600; position: relative; padding: 5px 0; transition: all 0.3s ease;" 
-               onmouseover="this.style.color='#1a5a4d'"
-               onmouseout="this.style.color='#333'">
-               Home
-               <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #A0DED6; transition: width 0.3s ease;"></span>
-            </a>
-            <a href="imc.htm" style="text-decoration: none; color: #333; font-weight: 600; position: relative; padding: 5px 0; transition: all 0.3s ease;" 
-               onmouseover="this.style.color='#1a5a4d'; this.querySelector('span').style.width='100%'" 
-               onmouseout="this.style.color='#333'; this.querySelector('span').style.width='0'">
-               IMC
-               <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #A0DED6; transition: width 0.3s ease;"></span>
-            </a>
-            <a href="login.htm" style="text-decoration: none; color: #333; font-weight: 600; position: relative; padding: 5px 0; transition: all 0.3s ease;" 
-               onmouseover="this.style.color='#1a5a4d'; this.querySelector('span').style.width='100%'" 
-               onmouseout="this.style.color='#333'; this.querySelector('span').style.width='0'">
-               Login
-               <span style="position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #A0DED6; transition: width 0.3s ease;"></span>
-            </a>
-            <a href="feedback.htm" style="text-decoration: none; color: white; font-weight: 600; background: #1a5a4d; padding: 10px 20px; border-radius: 30px; transition: all 0.3s ease;" 
-               onmouseover="this.style.background='#A0DED6'; this.style.color='#1a5a4d'" 
-               onmouseout="this.style.background='#1a5a4d'; this.style.color='white'">
-               Feedback
-            </a>
+        <nav class="nav-links">
+            <a href="vitamed-landingpage.htm">Home</a>
+            <a href="imc.htm">IMC</a>
+            <a href="login.htm">Login</a>
+            <a href="feedback.htm" style="background: #1a5a4d; color: #fff; border-radius: 30px; padding: 10px 20px;">Feedback</a>
         </nav>
     </header>
 
-  <section class="hero-section" style="background: #f8f9fa; padding: 80px 5%;">
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 50px;">
-        <!-- Text Content -->
-        <div style="flex: 1;">
-            <h1 style="font-size: 1rem; color: #1a5a4d; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">VitaMed</h1>
-            <h1 style="font-size: 3rem; color: #333; font-weight: 700; line-height: 1.2; margin-bottom: 20px;">
-                CUIDADO DE SAÚDE<br>PERSONALIZADO
-            </h1>
-            <p style="color: #666; font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
-                Conectamos você aos melhores especialistas em saúde<br>
-                com tecnologia e humanização para seu bem-estar integral.
-            </p>
-            <div style="display: flex; gap: 20px;">
-                <button style="background: #1a5a4d; color: white; border: none; padding: 12px 30px; border-radius: 30px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s;"
-                        onmouseover="this.style.background='#A0DED6'; this.style.color='#1a5a4d'"
-                        onmouseout="this.style.background='#1a5a4d'; this.style.color='white'">
-                    Comece Agora
-                </button>
-                <button style="background: transparent; color: #1a5a4d; border: 2px solid #1a5a4d; padding: 12px 30px; border-radius: 30px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s;"
-                        onmouseover="this.style.background='#1a5a4d'; this.style.color='white'"
-                        onmouseout="this.style.background='transparent'; this.style.color='#1a5a4d'">
-                    Mais Informações
-                </button>
+    <section class="hero-section">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 50px;">
+            <div style="flex: 1;">
+                <h1 style="font-size: 1rem; color: #1a5a4d; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">VitaMed</h1>
+                <h1 style="font-size: 3rem; color: #333; font-weight: 700; line-height: 1.2; margin-bottom: 20px;">
+                    CUIDADO DE SAÚDE<br>PERSONALIZADO
+                </h1>
+                <p style="color: #666; font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">
+                    Conectamos você aos melhores especialistas em saúde<br>
+                    com tecnologia e humanização para seu bem-estar integral.
+                </p>
+                <div style="display: flex; gap: 20px;">
+                    <button>Comece Agora</button>
+                    <button style="background: transparent; color: #1a5a4d; border: 2px solid #1a5a4d;">Mais Informações</button>
+                </div>
             </div>
-        </div>
-        
-        <!-- Image Content -->
-        <div style="flex: 1; display: flex; justify-content: center;">
-            <img src="imagens/dctor1.jpg" alt="Médico" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        </div>
-    </div>
-</section>
-    
-    
-    <!-- Seção conforme imagem de referência -->
-    <section class="health-focus-section">
-        <div class="health-focus-container">
-            <div class="doctor-left-col">
-                <img class="doctor-left-image" src="imagens/doutora1.jpg" alt="Médica" onerror="this.style.backgroundColor='#4ECDC4';">
-            </div>
-            <div class="health-content-col">
-                <h2>Sua Saúde em<br>Primeiro Lugar</h2>
-                <p>Cuidar da saúde nunca foi tão fácil! No VitaMed, reunimos tudo o que você precisa para viver melhor: conteúdos confiáveis, dicas práticas e ferramentas que te ajudam a manter corpo e mente em equilíbrio.</p>
+            <div style="flex: 1; display: flex; justify-content: center;">
+                <img src="imagens/dctor1.jpg" alt="Médico" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             </div>
         </div>
     </section>
-    
+
+    <section class="health-focus-section" style="background: #fff;">
+        <div class="health-focus-container" style="display: flex; align-items: center; gap: 40px; max-width: 1200px; margin: 0 auto; padding: 60px 0;">
+            <div class="doctor-left-col" style="flex: 1;">
+                <img class="doctor-left-image" src="imagens/doutora1.jpg" alt="Médica" style="width: 100%; max-width: 350px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+            </div>
+            <div class="health-content-col" style="flex: 2;">
+                <h2 style="color: #1a5a4d; font-size: 2.2rem; font-weight: 700;">Sua Saúde em<br>Primeiro Lugar</h2>
+                <p style="color: #555; font-size: 1.1rem;">
+                    Cuidar da saúde nunca foi tão fácil! No VitaMed, reunimos tudo o que você precisa para viver melhor: conteúdos confiáveis, dicas práticas e ferramentas que te ajudam a manter corpo e mente em equilíbrio.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <section style="padding: 60px 20px; background-color: #ffffff;">
         <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; max-width: 1200px; margin: 0 auto;">
-            <!-- Texto -->
             <div style="flex: 1; min-width: 260px; max-width: 400px;">
-                <h2 style="font-size: 40px; color: #000; font-weight: bold; line-height: 1.4; font-style: monnteserrat; text-align: left; ">
+                <h2 style="font-size: 2.5rem; color: #1a5a4d; font-weight: bold; line-height: 1.4; text-align: left;">
                     Transforme<br>
                     Sua Saúde com<br>
                     Conhecimento<br>
                     e Ação!
                 </h2>
             </div>
-
-            <!-- Imagem da médica com criança -->
             <div style="flex: 1; min-width: 260px; max-width: 500px; position: relative;">
-                <!-- Fundo verde com cantos arredondados -->
                 <div style="background-color: #A0DED6; border-radius: 15px; width: 100%; padding-top: 75%; position: absolute; top: 0; left: 0; z-index: 1;"></div>
                 <img src="imagens/medica_sorrindo.png" alt="Médica e criança" style="position: relative; z-index: 2; width: 100%; height: auto; border-radius: 10px;">
             </div>
         </div>
     </section>
-    <section style="position: relative; min-height: 500px; display: flex; align-items: center; justify-content: center; padding: 40px 20px; background: linear-gradient(135deg, #f0f9f8 0%, #d0ece8 100%); font-family: 'Arial', sans-serif;">
-    
-    <div style="position: relative; z-index: 2; background: white; border-radius: 20px; padding: 60px; max-width: 1000px; width: 100%; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); overflow: hidden;">
-        
-        <!-- Conteúdo textual -->
-        <div style="flex: 1; color: #333; margin-right: 40px;">
-            <h2 style="font-size: 2.2rem; font-weight: 600; line-height: 1.3; margin-bottom: 30px; color: #2a7f6e;">
-                PROTEJA SUA SAÚDE COM<br>
-                <span style="font-weight: 700; color: #1a5a4d;">QUEM MAIS ENTENDE NO BRASIL</span>
-            </h2>
-            
-            <div style="display: flex; gap: 40px; margin-top: 50px;">
-                <div style="text-align: center;">
-                    <div style="font-size: 3.5rem; font-weight: 700; line-height: 1; margin-bottom: 5px; color: #2a7f6e;">+50</div>
-                    <div style="font-size: 1.1rem; font-weight: 600; color: #555;">MÉDICOS<br>CADASTRADOS</div>
-                </div>
-                <div style="text-align: center;">
-                    <div style="font-size: 3.5rem; font-weight: 700; line-height: 1; margin-bottom: 5px; color: #2a7f6e;">+5</div>
-                    <div style="font-size: 1.1rem; font-weight: 600; color: #555;">MIL PACIENTES</div>
+
+    <section style="position: relative; min-height: 500px; display: flex; align-items: center; justify-content: center; padding: 40px 20px; background: linear-gradient(135deg, #f0f9f8 0%, #d0ece8 100%);">
+        <div style="position: relative; z-index: 2; background: white; border-radius: 20px; padding: 60px; max-width: 1000px; width: 100%; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); overflow: hidden;">
+            <div style="flex: 1; color: #333; margin-right: 40px;">
+                <h2 style="font-size: 2.2rem; font-weight: 600; line-height: 1.3; margin-bottom: 30px; color: #2a7f6e;">
+                    PROTEJA SUA SAÚDE COM<br>
+                    <span style="font-weight: 700; color: #1a5a4d;">QUEM MAIS ENTENDE NO BRASIL</span>
+                </h2>
+                <div style="display: flex; gap: 40px; margin-top: 50px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3.5rem; font-weight: 700; line-height: 1; margin-bottom: 5px; color: #2a7f6e;">+50</div>
+                        <div style="font-size: 1.1rem; font-weight: 600; color: #555;">MÉDICOS<br>CADASTRADOS</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3.5rem; font-weight: 700; line-height: 1; margin-bottom: 5px; color: #2a7f6e;">+5</div>
+                        <div style="font-size: 1.1rem; font-weight: 600; color: #555;">MIL PACIENTES</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <!-- Container de imagens -->
-        <div style="flex: 1; position: relative; height: 350px; min-width: 350px;">
-            
-            <!-- Foto principal (médica sorrindo) -->
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 220px; height: 220px; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); z-index: 3; border: 5px solid white;">
-                <img style="width: 100%; height: 100%; object-fit: cover;" src="https://www.takanourologia.com.br/wp-content/uploads/2020/06/Que-m%C3%A9dico-devo-procurar-para-fazer-o-tratamento-para-c%C3%A2ncer-de-pr%C3%B3stata.jpg" alt="Médica principal">
-            </div>
-            
-            <!-- Elemento decorativo (canto superior direito) -->
-            <div style="position: absolute; top: 0; right: 0; width: 120px; height: 120px; border-radius: 50%; background: #e8f5f3; display: flex; align-items: center; justify-content: center; z-index: 1;">
-                <div style="width: 80px; height: 80px; border-radius: 50%; background: #d0ece8;"></div>
-            </div>
-            
-            <!-- Elemento decorativo (canto inferior esquerdo) -->
-            <div style="position: absolute; bottom: 0; left: 0; width: 150px; height: 150px; border-radius: 50%; background: #e8f5f3; display: flex; align-items: center; justify-content: center; z-index: 1;">
-                <div style="width: 100px; height: 100px; border-radius: 50%; background: #d0ece8;"></div>
-            </div>
-            
-            <!-- Ícone médico pequeno (sobreposto) -->
-            <div style="position: absolute; bottom: 30px; right: 30px; width: 60px; height: 60px; border-radius: 50%; background: #2a7f6e; display: flex; align-items: center; justify-content: center; z-index: 4; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
-                    <path d="M12 6V18M18 12H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-            </div>
-        </div>
-    </div>
-</section>
-<footer style="background: linear-gradient(135deg, #A0DED6 0%, #8bd6c5 100%); color: #333; padding: 60px 20px 30px; font-family: 'Arial', sans-serif;">
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
-        
-        <!-- Coluna 1: Logo e sobre -->
-        <div>
-            <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center;">
-                <span style="color: #1a5a4d;">Vita</span>Med
-            </h3>
-            <p style="line-height: 1.6; margin-bottom: 20px; opacity: 0.9; color: #333;">
-                Conectando você aos melhores especialistas em saúde, com cuidado e excelência.
-            </p>
-            <div style="display: flex; gap: 15px; margin-top: 25px;">
-                <a href="#" style="color: #333; background: rgba(0,0,0,0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.05)'">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
-                </a>
-                <a href="#" style="color: #333; background: rgba(0,0,0,0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.05)'">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
-                </a>
-                <a href="#" style="color: #333; background: rgba(0,0,0,0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.05)'">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Coluna 2: Links rápidos -->
-        <div>
-            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; position: relative; padding-bottom: 10px; color: #1a5a4d;">
-                Links Rápidos
-                <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background: #1a5a4d;"></span>
-            </h4>
-            <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 12px;">
-                <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Sobre Nós</a></li>
-                <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Nossos Especialistas</a></li>
-                <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Como Funciona</a></li>
-                <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Depoimentos</a></li>
-                <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Blog de Saúde</a></li>
-            </ul>
-        </div>
-        
-        <!-- Coluna 3: Especialidades -->
-        <div>
-            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; position: relative; padding-bottom: 10px; color: #1a5a4d;">
-                Especialidades
-                <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background: #1a5a4d;"></span>
-            </h4>
-            <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 12px;">
-                <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Cardiologia</a></li>
-                <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Dermatologia</a></li>
-                <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Pediatria</a></li>
-                <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Ortopedia</a></li>
-                <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Ginecologia</a></li>
-            </ul>
-        </div>
-        
-        <!-- Coluna 4: Contato -->
-        <div>
-            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; position: relative; padding-bottom: 10px; color: #1a5a4d;">
-                Contato
-                <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background: #1a5a4d;"></span>
-            </h4>
-            <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 15px;">
-                <li style="display: flex; align-items: flex-start; gap: 10px;">
-                    <svg width="20" height="20" fill="#1a5a4d" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    <span style="opacity: 0.9; color: #333;">Av. Saúde, 1234 - São Paulo/SP</span>
-                </li>
-                <li style="display: flex; align-items: center; gap: 10px;">
-                    <svg width="20" height="20" fill="#1a5a4d" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    <span style="opacity: 0.9; color: #333;">contato@vitamed.com.br</span>
-                </li>
-                <li style="display: flex; align-items: center; gap: 10px;">
-                    <svg width="20" height="20" fill="#1a5a4d" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
-                    <span style="opacity: 0.9; color: #333;">(11) 98765-4321</span>
-                </li>
-            </ul>
-            
-            <div style="margin-top: 25px;">
-                <h5 style="font-size: 1rem; font-weight: 600; margin-bottom: 15px; color: #1a5a4d;">Assine nossa newsletter</h5>
-                <div style="display: flex; background: white; border-radius: 30px; overflow: hidden;">
-                    <input type="email" placeholder="Seu e-mail" style="flex: 1; border: none; padding: 12px 15px; outline: none;">
-                    <button style="background: #1a5a4d; color: white; border: none; padding: 0 20px; font-weight: 600; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.background='#2a7f6e'" onmouseout="this.style.background='#1a5a4d'">Enviar</button>
+            <div style="flex: 1; position: relative; height: 350px; min-width: 350px;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 220px; height: 220px; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); z-index: 3; border: 5px solid white;">
+                    <img style="width: 100%; height: 100%; object-fit: cover;" src="https://www.takanourologia.com.br/wp-content/uploads/2020/06/Que-m%C3%A9dico-devo-procurar-para-fazer-o-tratamento-para-c%C3%A2ncer-de-pr%C3%B3stata.jpg" alt="Médica principal">
+                </div>
+                <div style="position: absolute; top: 0; right: 0; width: 120px; height: 120px; border-radius: 50%; background: #e8f5f3; display: flex; align-items: center; justify-content: center; z-index: 1;">
+                    <div style="width: 80px; height: 80px; border-radius: 50%; background: #d0ece8;"></div>
+                </div>
+                <div style="position: absolute; bottom: 0; left: 0; width: 150px; height: 150px; border-radius: 50%; background: #e8f5f3; display: flex; align-items: center; justify-content: center; z-index: 1;">
+                    <div style="width: 100px; height: 100px; border-radius: 50%; background: #d0ece8;"></div>
+                </div>
+                <div style="position: absolute; bottom: 30px; right: 30px; width: 60px; height: 60px; border-radius: 50%; background: #2a7f6e; display: flex; align-items: center; justify-content: center; z-index: 4; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                        <path d="M12 6V18M18 12H6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Rodapé inferior -->
-    <div style="max-width: 1200px; margin: 50px auto 0; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.1); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
-        <div style="opacity: 0.8; font-size: 0.9rem; color: #333;">
-            © 2023 VitaMed. Todos os direitos reservados.
+    </section>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+            <!-- Coluna 1: Logo e sobre -->
+            <div>
+                <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center;">
+                    <span style="color: #1a5a4d;">Vita</span>Med
+                </h3>
+                <p style="line-height: 1.6; margin-bottom: 20px; opacity: 0.9; color: #333;">
+                    Conectando você aos melhores especialistas em saúde, com cuidado e excelência.
+                </p>
+                <div style="display: flex; gap: 15px; margin-top: 25px;">
+                    <a href="#" style="color: #333; background: rgba(0,0,0,0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.05)'">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                    </a>
+                    <a href="#" style="color: #333; background: rgba(0,0,0,0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.05)'">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                    </a>
+                    <a href="#" style="color: #333; background: rgba(0,0,0,0.05); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.1)'" onmouseout="this.style.background='rgba(0,0,0,0.05)'">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Coluna 2: Links rápidos -->
+            <div>
+                <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; position: relative; padding-bottom: 10px; color: #1a5a4d;">
+                    Links Rápidos
+                    <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background: #1a5a4d;"></span>
+                </h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 12px;">
+                    <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Sobre Nós</a></li>
+                    <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Nossos Especialistas</a></li>
+                    <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Como Funciona</a></li>
+                    <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Depoimentos</a></li>
+                    <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Blog de Saúde</a></li>
+                </ul>
+            </div>
+            <!-- Coluna 3: Especialidades -->
+            <div>
+                <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; position: relative; padding-bottom: 10px; color: #1a5a4d;">
+                    Especialidades
+                    <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background: #1a5a4d;"></span>
+                </h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 12px;">
+                    <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Cardiologia</a></li>
+                    <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Dermatologia</a></li>
+                    <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Pediatria</a></li>
+                    <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Ortopedia</a></li>
+                    <li><a href="#" style="color: #333; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1';this.style.paddingLeft='5px'" onmouseout="this.style.opacity='0.9';this.style.paddingLeft='0'">Ginecologia</a></li>
+                </ul>
+            </div>
+            <!-- Coluna 4: Contato -->
+            <div>
+                <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; position: relative; padding-bottom: 10px; color: #1a5a4d;">
+                    Contato
+                    <span style="position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background: #1a5a4d;"></span>
+                </h4>
+                <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 15px;">
+                    <li style="display: flex; align-items: flex-start; gap: 10px;">
+                        <svg width="20" height="20" fill="#1a5a4d" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span style="opacity: 0.9; color: #333;">Av. Saúde, 1234 - São Paulo/SP</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px;">
+                        <svg width="20" height="20" fill="#1a5a4d" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <span style="opacity: 0.9; color: #333;">contato@vitamed.com.br</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px;">
+                        <svg width="20" height="20" fill="#1a5a4d" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+                        <span style="opacity: 0.9; color: #333;">(11) 98765-4321</span>
+                    </li>
+                </ul>
+                <div style="margin-top: 25px;">
+                    <h5 style="font-size: 1rem; font-weight: 600; margin-bottom: 15px; color: #1a5a4d;">Assine nossa newsletter</h5>
+                    <div style="display: flex; background: white; border-radius: 30px; overflow: hidden;">
+                        <input type="email" placeholder="Seu e-mail" style="flex: 1; border: none; padding: 12px 15px; outline: none;">
+                        <button style="background: #1a5a4d; color: white; border: none; padding: 0 20px; font-weight: 600; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.background='#2a7f6e'" onmouseout="this.style.background='#1a5a4d'">Enviar</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div style="display: flex; gap: 20px;">
-            <a href="#" style="color: #333; text-decoration: none; opacity: 0.8; font-size: 0.9rem; transition: all 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">Termos de Uso</a>
-            <a href="#" style="color: #333; text-decoration: none; opacity: 0.8; font-size: 0.9rem; transition: all 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">Política de Privacidade</a>
+        <div style="max-width: 1200px; margin: 50px auto 0; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.1); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
+            <div style="opacity: 0.8; font-size: 0.9rem; color: #333;">
+                © 2023 VitaMed. Todos os direitos reservados.
+            </div>
+            <div style="display: flex; gap: 20px;">
+                <a href="#" style="color: #333; text-decoration: none; opacity: 0.8; font-size: 0.9rem; transition: all 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">Termos de Uso</a>
+                <a href="#" style="color: #333; text-decoration: none; opacity: 0.8; font-size: 0.9rem; transition: all 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">Política de Privacidade</a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
+    <script src="java.js"></script>
 </body>
 </html>
